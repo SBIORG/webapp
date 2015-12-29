@@ -1,0 +1,497 @@
+@charset "utf-8";
+/* CSS Document */
+/*适用于移动端*/
+.phone_work, .phone_work_sp, .phone_meter_reading, .center_phone_pages{
+	margin:0 auto;
+	width:100%;
+	overflow:auto;
+}
+.inner_content{
+	width:100%;
+}
+.each_box{
+	width:100%;
+	border-top:solid 1px #e1dede;
+	border-bottom:solid 1px #e1dede;
+}
+.each_h1{
+	background:#f9f9f9;
+	color:#333;
+	border-top:solid 1px #fff;
+}
+.each_info{
+	background:#fff;
+}
+.info_text{
+	width:75%;
+}
+.info_text a, .info_text_building a{color:#6690c7;}
+.each_time, .each_info_tuifei{color:#999999;}
+.each_box table{
+	width:100%;
+	table-layout:fixed;
+	word-break:break-all;
+}
+.each_box table td{
+	vertical-align:top;
+	text-align:left;
+}
+.each_box table .info_title{
+	color:#7c7b7b;
+}
+.each_box table .info_words{
+	color:#999999;
+}
+.each_box table i{
+	font-style:normal;
+}
+.ywsp_button, .bottom_floor_btn{
+	width:100%;
+	position:fixed;
+	border-bottom:solid 1px #fff;
+}
+.ywsp_button ul li{
+	float:left;
+	width:50%;
+}
+.ywsp_button ul li a{
+	display:block;
+	width:100%;
+	height:100%;
+	color:#fff;
+	text-align:center;
+}
+.ywsp_button ul li.refuse a, .floor_up_down ul li.floor_up a, .floor_up_down ul li.floor_down a, .bottom_floor_btn ul li.floor_up a, .bottom_floor_btn ul li.floor_down a
+{background:#85b4e8;}
+.ywsp_button ul li.pass a, .bottom_floor_btn ul li.floor_save a{background:#478ede;}
+.floor_up_down ul li.floor_num span{background:#478ede;}
+.floor_up_down{
+	width:100%;
+}
+.floor_up_down ul li, .bottom_floor_btn ul li{
+	float:left;
+	width:33.3%;
+}
+.floor_up_down ul li a, .floor_up_down ul li span, .bottom_floor_btn ul li a{
+	display:block;
+	width:100%;
+	height:100%;
+	color:#fff;
+	text-align:center;
+}
+.read_meter{
+	width:100%;
+	position:fixed;
+	z-index:10;
+	background:#fff;
+}
+.select_box{
+	border-top:solid 1px #d2d2d2;
+	border-bottom:solid 1px #d2d2d2;
+	width:100%;
+}
+.choose_meter{
+	position:relative;
+	width:25%;
+}
+.choose_data{
+	border-left:solid 1px #d2d2d2;
+	position:relative;
+}
+.choose_time{
+	width:25%;
+}
+.choose_buildings{
+	border-left:solid 1px #d2d2d2;
+	position:relative;
+	width:30%;
+}
+.choose_time span{
+	display:inline-block;
+	padding:0px 5px;
+}
+.metet_select{
+	background:url(../images/select_icon.png) right bottom no-repeat;
+}
+.metet_select a{
+	display:block;
+	text-align:center;
+	width:100%;
+	height:100%;
+	color:#4f4e4e;
+}
+.metet_select input[type="text"]{
+	border:0;
+	width:90%;
+	text-align:center;
+	color:#4f4e4e;
+}
+.choose_time span{color:#4f4e4e;}
+.meter_popDiv{
+	position:absolute;
+	left:0;
+	width:100%;
+}
+.meter_popDiv ul li{
+	text-align:center;
+	color:#fff;
+	background:#4f4e4e;
+	border-top:solid 1px #676666;
+}
+.bulidings_list{
+	overflow:auto;
+}
+.write_meter_num{
+	width:92%;
+	border:solid 1px #e1dede;
+}
+.write_meter_txt{
+	width:92%;
+	height:0;
+	border:solid 1px #e1dede;
+	transition: height 0.2s;
+	-moz-transition: height 0.2s; /* Firefox 4 */
+	-webkit-transition: height 0.2s; /* Safari 和 Chrome */
+	-o-transition: height 0.2s; /* Opera */
+	display:none;
+}
+.save_meter_num{
+	border:solid 1px #c2c2c2;
+	background:#fff;
+	color:#333333;
+}
+.add_meter_txt{
+	color:#adadad;
+}
+.word_zhi{
+	display:inline-block;
+	color:#4f4e4e;
+}
+/*iphone low 330 device-pixel-ratio: 2 */
+@media screen and (max-width:330px) {
+	.each_box{margin-top:5px;}
+	.each_h1{
+		padding:10px 25px;
+		font-size:14px;
+	}
+	.each_info{
+		padding:10px 25px;
+		font-size:12px;
+	}
+	.each_box table td{
+	    padding:7px 0;
+	}
+	.each_box table .info_title{
+	    width:30%;
+    }
+	.each_box table.width_rewrite .info_title{
+	    width:36%;
+    }
+	.ywsp_button ul li, .bottom_floor_btn ul li{
+		height:39px;
+		line-height:39px;
+		font-size:15px;
+	}
+	.floor_up_down{margin-top:5px;}
+	.floor_up_down ul li{
+		height:23px;
+		line-height:23px;
+		font-size:12px;
+	}
+	.select_box{
+		padding:5px 0;
+	}
+	.choose_meter{
+		padding:6px 9px;
+	}
+	.word_zhi{padding:6px 2px 6px 4px;}
+	.choose_data{margin-left:10px;}
+	.choose_time{
+		padding:2px 4px;
+	}
+	.choose_buildings{
+		margin-left:10px;
+		padding:6px 4px;
+	}
+	.metet_select{
+		background-size:10px auto;
+	}
+	.metet_select a, .metet_select span, .word_zhi{
+		font-size:12px;
+	}
+	.metet_select input[type="text"]{
+		font-size:12px;
+	}
+	.meter_popDiv ul li{
+		font-size:12px;
+		height:34px;
+		line-height:35px;
+	}
+	.write_meter_num, .write_meter_txt{
+		font-size:12px;
+		padding:8px 10px;
+	}
+	.write_meter_txt, .meter_box{
+		margin-top:10px;
+	}
+	.write_meter_txt_height{
+		height:55.5px;
+	}
+	.save_meter_num{
+		font-size:12px;
+		padding:6px 20px;
+	}
+	.add_meter_txt{
+		padding:6px 9px;
+		font-size:12px;
+	}
+}
+
+/*dev 330-480 device-pixel-ratio: 1.5 */
+@media screen and (min-width:331px) and (max-width:480px) {
+	.each_box{margin-top:6.5px;}
+	.each_h1{
+		padding:13px 33px;
+		font-size:16px;
+	}
+	.each_info{
+		padding:13px 33px;
+		font-size:14px;
+	}
+	.each_box table td{
+	    padding:8.5px 0;
+	}
+	.each_box table .info_title{
+	    width:30%;
+    }
+	.each_box table.width_rewrite .info_title{
+	    width:39%;
+    }
+
+	.ywsp_button ul li, .bottom_floor_btn ul li{
+		height:52px;
+		line-height:52px;
+		font-size:20px;
+	}
+	.floor_up_down{margin-top:6.5px;}
+	.floor_up_down ul li{
+		height:31px;
+		line-height:31px;
+		font-size:16px;
+	}
+	.select_box{
+		padding:7px 0;
+	}
+	.choose_meter{
+		padding:8px 12px;
+	}
+	.word_zhi{padding:8px 2px 8px 6px;}
+	.choose_data{margin-left:13px;}
+	.choose_time{
+		
+		padding:6px 7px;
+	}
+	.choose_buildings{
+		margin-left:13px;
+		padding:8px 7px;
+	}
+	.metet_select{
+		background-size:12px auto;
+	}
+	.metet_select a, .metet_select span, .word_zhi{
+		font-size:15px;
+	}
+	.metet_select input[type="text"]{
+		font-size:15px;
+	}
+	.meter_popDiv ul li{
+		font-size:15px;
+		height:46px;
+		line-height:46px;
+	}
+	.write_meter_num, .write_meter_txt{
+		font-size:14px;
+		padding:10px 13px;
+	}
+	.write_meter_txt, .meter_box{
+		margin-top:13px;
+	}
+	.write_meter_txt_height{
+		height:75px;
+	}
+	.save_meter_num{
+		font-size:16px;
+		padding:8px 27px;
+	}
+	.add_meter_txt{
+		padding:8px 12px;
+		font-size:14px;
+	}
+}
+/*dev 480-639  device-pixel-ratio: 1.2*/
+@media screen and (min-width:481px) and (max-width:639px) {
+	.each_box{margin-top:8px;}
+	.each_h1{
+		padding:16px 41px;
+		font-size:18px;
+	}
+	.each_info{
+		padding:16px 41px;
+		font-size:16px;
+	}
+	.each_box table td{
+	    padding:9px 0;
+	}
+	.ywsp_button ul li, .bottom_floor_btn ul li{
+		height:65px;
+		line-height:65px;
+		font-size:25px;
+	}
+	.floor_up_down{margin-top:8px;}
+	.floor_up_down ul li{
+		height:38px;
+		line-height:38px;
+		font-size:18px;
+	}
+	.each_box table .info_title{
+	    width:27%;
+    }
+	.each_box table.width_rewrite .info_title{
+	    width:32%;
+    }
+	.select_box{
+		padding:8px 0;
+	}
+	.choose_meter{
+		padding:10px 15px;
+	}
+	.word_zhi{padding:10px 2px 10px 8px;}
+	.choose_data{margin-left:16px;}
+	.choose_time{
+		
+		padding:9px 10px;
+	}
+	.choose_buildings{
+		margin-left:16px;
+		padding:10px 10px;
+	}
+	.metet_select{
+		background-size:14px auto;
+	}
+	.metet_select a, .meter_select span, .word_zhi{
+		font-size:18px;
+	}
+	.metet_select input[type="text"]{
+		font-size:18px;
+	}
+	.meter_popDiv ul li{
+		font-size:18px;
+		height:58px;
+		line-height:58px;
+	}
+	.write_meter_num, .write_meter_txt{
+		font-size:16px;
+		padding:13px 16px;
+	}
+	.write_meter_txt, .meter_box{
+		margin-top:16px;
+	}
+	.write_meter_txt_height{
+		height:93px;
+	}
+	.save_meter_num{
+		font-size:18px;
+		padding:10px 33px;
+	}
+	.add_meter_txt{
+		padding:10px 15px;
+		font-size:16px;
+	}
+}
+/*dev 640~ device-pixel-ratio: 1*/
+@media screen and (min-width:640px) {
+	.each_box{margin-top:10px;}
+	.each_h1{
+		padding:20px 50px;
+		font-size:18px;
+	}
+	.each_info{
+		padding:20px 50px;
+		font-size:16px;
+	}
+	.each_box table td{
+	    padding:10px 0;
+	}
+	.ywsp_button ul li, .bottom_floor_btn ul li{
+		height:78px;
+		line-height:78px;
+		font-size:30px;
+	}
+	.floor_up_down{margin-top:10px;}
+	.floor_up_down ul li{
+		height:46px;
+		line-height:46px;
+		font-size:24px;
+	}
+	.each_box table .info_title{
+	    width:22%;
+    }
+	.select_box{
+		padding:10px 0;
+	}
+	.choose_meter{
+		padding:12px 18px;
+	}
+	.word_zhi{padding:12px 2px 12px 10px;}
+	.choose_data{margin-left:20px;}
+	.choose_time{
+		padding:12px 13px;
+	}
+	.choose_buildings{
+		margin-left:20px;
+		padding:12px 13px;
+	}
+	.metet_select{
+		
+	}
+	.metet_select a, .meter_select span, .word_zhi{
+		font-size:24px;
+	}
+	.metet_select input[type="text"]{
+		font-size:24px;
+	}
+	.meter_popDiv ul li{
+		font-size:24px;
+		height:70px;
+		line-height:70px;
+	}
+	.write_meter_num, .write_meter_txt{
+		font-size:16px;
+		padding:16px 20px;
+	}
+	.save_meter_num{
+		font-size:20px;
+		padding:12px 40px;
+	}
+	.add_meter_txt{
+		padding:12px 18px;
+		font-size:16px;
+	}
+	.write_meter_txt, .meter_box{
+		margin-top:20px;
+	}
+	.write_meter_txt_height{
+		height:119px;
+	}
+}
+@media screen and (min-width:1000px) {
+		.phone_work, .phone_work_sp, .ywsp_button, .read_meter, .bottom_floor_btn, .phone_meter_reading, .center_top_tab, .center_phone_pages{width:1000px!important;}
+		.ywsp_button, .read_meter, .bottom_floor_btn, .center_top_tab{
+			left:50%;
+			margin-left:-500px;
+		}
+		.each_box table .info_title{
+	       width:20%!important;
+        }
+}
+

@@ -1,0 +1,38 @@
+/*上传按钮*/
+.fileBtn input{
+        display: inline-block;
+        font-size: 50px;
+        position: absolute;
+        right:0;
+        filter:alpha(opacity=0);
+        opacity:.0;
+        cursor:pointer;
+        
+}
+.fileBtn{
+        position: relative;
+        display: block;
+        float:left;
+        width:45px;
+        height:22px;
+        background:url(/skin/js/fileupload/upload.gif);
+        overflow: hidden;
+		margin-right:10px;
+}
+
+/*图片上传*/
+ul.upload_img li {float:left; margin-right:18px;} 
+ul.upload_img li img{border:1px solid #ccc; padding:1px;}
+ul.upload_img li .fileBtn{ margin-left:32px;}
+
+/*文件上传*/
+.J-fileUploadTpl{ min-width:300px;}
+.fileList .file{ display:inline-block; margin-right:3px; color:#0068b6; float:left; cursor:pointer;}
+
+.Progressbar{
+    display: none;
+    position:absolute;
+    background:url(/skin/js/fileupload/Progressbar.gif);
+    width:190px;
+    height:14px;
+}

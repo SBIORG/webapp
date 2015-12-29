@@ -1,0 +1,667 @@
+@charset "utf-8";
+/* CSS Document */
+.center_login{
+	margin:0 auto;
+	width:100%;
+}
+.center_login_box{
+	margin:0 auto;
+	width:79%;
+}
+.center_logo{
+	width:100%;
+	background:url(../images/center-logo.png) no-repeat;
+}
+.center_login_box .inner .login_div{
+	width:100%;
+	border-bottom:solid 1px #9dccff;
+}
+.center_login_box .inner .login_div.username i{
+	display:block;
+	width:16%;
+	border-right:solid 1px #9dccff;
+	background:url(../images/per_icon.png) center no-repeat;
+}
+.center_login_box .inner .login_div.pswd i{
+	display:block;
+	border-right:solid 1px #9dccff;
+	width:16%;
+	background:url(../images/clock_icon.png) center no-repeat;
+}
+.center_login_box .inner .login_div .info_input{
+	width:75%;
+	border:0;
+	background:0 none;
+}
+.center_login_submit{
+	width:100%;
+	border-radius:12px;
+	-webkit-border-radius:12px;
+	-moz-border-radius:12px;
+	-o-border-radius:12px;
+	background:#deeeff;
+	border:0;
+	color:#478ede;
+}
+.center_top_tab{
+	width:100%;
+	position:fixed;
+	background:#fff;
+}
+.center_tab_nav{
+	width:59%;
+	margin:0 auto;
+	
+}
+.center_tab_nav ul li{
+	width:47%;
+	float:left;
+	text-align:center;
+	border:solid 2px #478ede;
+}
+.center_tab_nav ul li a{
+	display:block;
+	width:100%;
+}
+.center_tab_nav ul li.tab_left{
+	border-radius:12px 0 0 12px;
+	-webkit-border-radius:12px 0 0 12px;
+	-moz-border-radius:12px 0 0 12px;
+	-o-border-radius:12px 0 0 12px;
+}
+.center_tab_nav ul li.tab_right{
+	border-radius:0 12px 12px 0;
+	-webkit-border-radius:0 12px 12px 0;
+	-moz-border-radius:0 12px 12px 0;
+	-o-border-radius:0 12px 12px 0;
+}
+
+.center_tab_nav ul li.normal{
+	background:#478ede;
+	color:#fff;
+}
+.center_tab_nav ul li.actived{
+	background:#fff;
+	color:#478ede;
+}
+.center_tab_nav ul li a{
+	display:block;
+	width:100%;
+}
+.change_color{color:#990000!important;}
+.each_choose{
+	display:block;
+}
+.each_choose.normal{background:url(../images/jf_icon_n.png) no-repeat;}
+.each_choose.actived{background:url(../images/jf_icon_a.png) no-repeat;} 
+.choose_time input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #4f4e4e;
+}
+
+.choose_time input::-webkit-input-placeholder{
+    color: #4f4e4e;
+}
+.read_met_title{
+	background:#85b4e8;
+	color:#fff;
+	width:100%;
+	border-radius:12px;
+	-moz-border-radius:12px;
+	-webkit-border-radius:12px;
+	-ms-border-radius:12px;
+	-o-border-radius:12px;
+}
+.read_met_title ul li{
+	float:left;
+	width:33%;
+	text-align:center;
+}
+.read_met_title ul li.read_met_data{
+	width:34%;
+}
+.each_h1_center{
+	text-align:center;
+}
+.each_info.each_met_num{
+	padding-left:0;
+	padding-right:0;
+	width:100%;
+}
+.each_met_num table td{
+	text-align:center;
+	color:#999999;
+}
+.a-upload {
+    position: relative;
+    cursor: pointer;
+    color: #333333;
+    background: #ffffff;
+    border: 1px solid #c2c2c2;
+    overflow: hidden;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1
+}
+
+.a-upload  input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer
+}
+.feedback_btn{
+    display:block;
+    position:fixed;
+    right:0;
+    z-index:99999;
+    _position:absolute;
+   /* _top:expression(eval(document.documentElement.scrollBottom + 50));*/
+}
+.feedback_btn a{
+    display:block;
+}
+.feedback_btn em{
+    display:none;
+	margin-top:5px;
+}
+
+/*适用于移动端*/
+/*iphone low 330 device-pixel-ratio: 2 */
+@media screen and (max-width:330px) {
+	.center_login_box{margin-top:116.5px;}
+	.center_logo{
+		height:24.5px;
+		background-size:100% auto;
+	}
+	.center_login_box .inner{
+		margin-top:12px;
+	}
+	.center_login_box .inner .login_div{
+		padding:9px 0;
+	}
+	.center_login_box .inner .login_div.username i{
+		height:19px;
+		background-size:auto 19px;
+	}
+	.center_login_box .inner .login_div.pswd{margin-top:5px;}
+	.center_login_box .inner .login_div.pswd i{
+		height:19px;
+		background-size:auto 19px;
+	}
+	.center_login_box .inner .login_div .info_input{
+		font-size:12px;
+		height:19px;
+		line-height:19px;
+		margin-left:6px;
+	}
+	.center_login_submit{
+		margin-top:15px;
+		font-size:14px;
+		height:34px;
+	}
+	.bottom_nav ul li.hetong i{
+	   width:24px;
+	   height:22px;
+	   background:url(../images/phone/icon05_n.png) no-repeat;
+	   background-size:24px auto;
+    }
+	.bottom_nav ul li.jiaofei i{
+	   width:27px;
+	   height:22px;
+	   background:url(../images/phone/icon06_n.png) no-repeat;
+	   background-size:27px auto;
+    }
+	.bottom_nav ul li.tuifei i{
+	   width:22px;
+	   height:22px;
+	   background:url(../images/phone/icon07_n.png) no-repeat;
+	   background-size:22px auto;
+    }
+	.bottom_nav ul li.shuidian i{
+	   width:19px;
+	   height:22px;
+	   background:url(../images/phone/icon08_n.png) no-repeat;
+	   background-size:19px auto;
+    }
+	.bottom_nav ul li.hetong.nav_actived i{
+	   width:24px;
+	   height:22px;
+	   background:url(../images/phone/icon05_a.png) no-repeat;
+	   background-size:24px auto;
+    }
+	.bottom_nav ul li.jiaofei.nav_actived i{
+	   width:27px;
+	   height:22px;
+	   background:url(../images/phone/icon06_a.png) no-repeat;
+	   background-size:27px auto;
+    }
+	.bottom_nav ul li.tuifei.nav_actived i{
+	   width:22px;
+	   height:22px;
+	   background:url(../images/phone/icon07_a.png) no-repeat;
+	   background-size:22px auto;
+    }
+	.bottom_nav ul li.shuidian.nav_actived i{
+	   width:19px;
+	   height:22px;
+	   background:url(../images/phone/icon08_a.png) no-repeat;
+	   background-size:19px auto;
+    }
+	.center_top_tab{
+		padding:8px 0;
+	}
+	.center_tab_nav ul li a{
+		height:27px;
+		font-size:11px;
+		line-height:27px;
+	}
+	.center_phone_pages .info_text{width:48%;}
+	.center_phone_pages .info_text_building{width:38%;}
+	.center_phone_pages .each_info_tuifei{width:58%;}
+	.each_choose{
+		width:13px;
+		height:13px;
+		margin-left:20px;
+		margin-top:3px;
+	}
+	.each_choose.normal{background-size:13px auto;}
+	.each_choose.actived{background-size:13px auto;}
+	.read_met_title{
+		margin-top:7.5px;
+		border-radius:6px;
+		-moz-border-radius:6px;
+		-webkit-border-radius:6px;
+		-ms-border-radius:6px;
+		-o-border-radius:6px;
+	}
+	.read_met_title ul li{
+		font-size:12px;
+		height:28.5px;
+		line-height:28.5px;
+	}
+	.feedback_btn a{
+		width:38px;
+		height:38px;
+		background:url(../images/feed_back_icon.png) no-repeat;
+		background-size:38px 38px;
+	}
+	.feedback_btn em{
+		width:38px;
+		height:38px;
+		background:url(../images/go_top_icon.png) no-repeat;
+		background-size:38px 38px;
+	}
+}
+/*dev 330-480 device-pixel-ratio: 1.5 */
+@media screen and (min-width:331px) and (max-width:480px) {
+	.center_login_box{margin-top:155px;}
+	.center_logo{
+		height:33px;
+		background-size:100% auto;
+	}
+	.center_login_box .inner{
+		margin-top:16px;
+	}
+	.center_login_box .inner .login_div{
+		padding:12px 0;
+	}
+	.center_login_box .inner .login_div.username i{
+		height:26px;
+		background-size:auto 26px;
+	}
+	.center_login_box .inner .login_div.pswd{margin-top:6.5px;}
+	.center_login_box .inner .login_div.pswd i{
+		height:26px;
+		background-size:auto 26px;
+	}
+	.center_login_box .inner .login_div .info_input{
+		font-size:16px;
+		height:26px;
+		line-height:26px;
+		margin-left:8px;
+	}
+	.center_login_submit{
+		margin-top:30px;
+		font-size:18px;
+		height:45px;
+	}
+	.bottom_nav ul li.hetong i{
+	   width:34px;
+	   height:31px;
+	   background:url(../images/phone/icon05_n.png) no-repeat;
+	   background-size:34px auto;
+    }
+	.bottom_nav ul li.jiaofei i{
+	   width:38px;
+	   height:31px;
+	   background:url(../images/phone/icon06_n.png) no-repeat;
+	   background-size:38px auto;
+    }
+	.bottom_nav ul li.tuifei i{
+	   width:31px;
+	   height:31px;
+	   background:url(../images/phone/icon07_n.png) no-repeat;
+	   background-size:31px auto;
+    }
+	.bottom_nav ul li.shuidian i{
+	   width:27px;
+	   height:31px;
+	   background:url(../images/phone/icon08_n.png) no-repeat;
+	   background-size:27px auto;
+    }
+	.bottom_nav ul li.hetong.nav_actived i{
+	   width:34px;
+	   height:31px;
+	   background:url(../images/phone/icon05_a.png) no-repeat;
+	   background-size:34px auto;
+    }
+	.bottom_nav ul li.jiaofei.nav_actived i{
+	   width:38px;
+	   height:31px;
+	   background:url(../images/phone/icon06_a.png) no-repeat;
+	   background-size:38px auto;
+    }
+	.bottom_nav ul li.tuifei.nav_actived i{
+	   width:31px;
+	   height:31px;
+	   background:url(../images/phone/icon07_a.png) no-repeat;
+	   background-size:31px auto;
+    }
+	.bottom_nav ul li.shuidian.nav_actived i{
+	   width:27px;
+	   height:31px;
+	   background:url(../images/phone/icon08_a.png) no-repeat;
+	   background-size:27px auto;
+    }
+	.center_top_tab{
+		padding:10px 0;
+	}
+	.center_tab_nav ul li a{
+		height:36px;
+		font-size:14px;
+		line-height:36px;
+	}
+	.center_phone_pages .info_text{width:48%;}
+	.center_phone_pages .info_text_building{width:38%;}
+	.center_phone_pages .each_info_tuifei{width:58%;}
+	.each_choose{
+		width:17px;
+		height:17px;
+		margin-left:27px;
+		margin-top:3px;
+	}
+	.each_choose.normal{background-size:17px auto;}
+	.each_choose.actived{background-size:17px auto;}
+	.read_met_title{
+		margin-top:10px;
+		border-radius:8px;
+		-moz-border-radius:8px;
+		-webkit-border-radius:8px;
+		-ms-border-radius:8px;
+		-o-border-radius:8px;
+	}
+	.read_met_title ul li{
+		font-size:14px;
+		height:38px;
+		line-height:38px;
+	}
+	.feedback_btn a{
+		width:50px;
+		height:50px;
+		background:url(../images/feed_back_icon.png) no-repeat;
+		background-size:50px 50px;
+	}
+	.feedback_btn em{
+		width:50px;
+		height:50px;
+		background:url(../images/go_top_icon.png) no-repeat;
+		background-size:50px 50px;
+	}
+}
+/*dev 480-639  device-pixel-ratio: 1.2*/
+@media screen and (min-width:481px) and (max-width:639px) {
+	.center_login_box{margin-top:194px;}
+	.center_logo{
+		height:41px;
+		background-size:100% auto;
+	}
+	.center_login_box .inner{
+		margin-top:20px;
+	}
+	.center_login_box .inner .login_div{
+		padding:15px 0;
+	}
+	.center_login_box .inner .login_div.username i{
+		height:32px;
+		background-size:auto 32px;
+	}
+	.center_login_box .inner .login_div.pswd{margin-top:8px;}
+	.center_login_box .inner .login_div.pswd i{
+		height:32px;
+		background-size:auto 32px;
+	}
+	.center_login_box .inner .login_div .info_input{
+		font-size:20px;
+		height:32px;
+		line-height:32px;
+		margin-left:10px;
+	}
+	.center_login_submit{
+		margin-top:25px;
+		font-size:21px;
+		height:57px;
+	}
+	.bottom_nav ul li.hetong i{
+	   width:43px;
+	   height:39px;
+	   background:url(../images/phone/icon05_n.png) no-repeat;
+	   background-size:43px auto;
+    }
+	.bottom_nav ul li.jiaofei i{
+	   width:47px;
+	   height:39px;
+	   background:url(../images/phone/icon06_n.png) no-repeat;
+	   background-size:47px auto;
+    }
+	.bottom_nav ul li.tuifei i{
+	   width:39px;
+	   height:39px;
+	   background:url(../images/phone/icon07_n.png) no-repeat;
+	   background-size:39px auto;
+    }
+	.bottom_nav ul li.shuidian i{
+	   width:34px;
+	   height:39px;
+	   background:url(../images/phone/icon08_n.png) no-repeat;
+	   background-size:34px auto;
+    }
+	.bottom_nav ul li.hetong.nav_actived i{
+	   width:43px;
+	   height:39px;
+	   background:url(../images/phone/icon05_a.png) no-repeat;
+	   background-size:43px auto;
+    }
+	.bottom_nav ul li.jiaofei.nav_actived i{
+	   width:47px;
+	   height:39px;
+	   background:url(../images/phone/icon06_a.png) no-repeat;
+	   background-size:47px auto;
+    }
+	.bottom_nav ul li.tuifei.nav_actived i{
+	   width:39px;
+	   height:39px;
+	   background:url(../images/phone/icon07_a.png) no-repeat;
+	   background-size:39px auto;
+    }
+	.bottom_nav ul li.shuidian.nav_actived i{
+	   width:34px;
+	   height:39px;
+	   background:url(../images/phone/icon08_a.png) no-repeat;
+	   background-size:34px auto;
+    }
+	.center_top_tab{
+		padding:13px 0;
+	}
+	.center_tab_nav ul li a{
+		height:45px;
+		font-size:18px;
+		line-height:45px;
+	}
+	.center_phone_pages .info_text{width:54%;}
+	.center_phone_pages .info_text_building{width:38%;}
+	.center_phone_pages .each_info_tuifei{width:58%;}
+	.each_choose{
+		width:21px;
+		height:21px;
+		margin-left:33px;
+		margin-top:2px;
+	}
+	.each_choose.normal{background-size:21px auto;}
+	.each_choose.actived{background-size:21px auto;}
+	.read_met_title{
+		margin-top:12.5px;
+		border-radius:10px;
+		-moz-border-radius:10px;
+		-webkit-border-radius:10px;
+		-ms-border-radius:10px;
+		-o-border-radius:810px;
+	}
+	.read_met_title ul li{
+		font-size:18px;
+		height:47.5px;
+		line-height:47.5px;
+	}
+	.feedback_btn a{
+		width:63px;
+		height:63px;
+		background:url(../images/feed_back_icon.png) no-repeat;
+		background-size:63px 63px;
+	}
+	.feedback_btn em{
+		width:63px;
+		height:63px;
+		background:url(../images/go_top_icon.png) no-repeat;
+		background-size:63px 63px;
+	}
+}
+/*dev 640~ device-pixel-ratio: 1*/
+@media screen and (min-width:640px) {
+	.center_login{width:640px;}
+	.center_login_box{margin-top:233px;}
+	.center_logo{
+		height:49px;
+		background-size:100% auto;
+	}
+	.center_login_box .inner{
+		margin-top:24px;
+	}
+	.center_login_box .inner .login_div{
+		padding:18px 0;
+	}
+	.center_login_box .inner .login_div.username i{
+		height:39px;
+		background-size:auto 39px;
+	}
+	.center_login_box .inner .login_div.pswd{margin-top:10px;}
+	.center_login_box .inner .login_div.pswd i{
+		height:39px;
+		background-size:auto 39px;
+	}
+	.center_login_box .inner .login_div .info_input{
+		font-size:24px;
+		height:39px;
+		line-height:39px;
+		margin-left:12px;
+	}
+	.center_login_submit{
+		margin-top:30px;
+		font-size:24px;
+		height:68px;
+	}
+	.bottom_nav ul li.hetong i{
+	   width:52px;
+	   height:47px;
+	   background:url(../images/phone/icon05_n.png) no-repeat;
+    }
+	.bottom_nav ul li.jiaofei i{
+	   width:57px;
+	   height:47px;
+	   background:url(../images/phone/icon06_n.png) no-repeat;
+    }
+	.bottom_nav ul li.tuifei i{
+	   width:47px;
+	   height:47px;
+	   background:url(../images/phone/icon07_n.png) no-repeat;
+    }
+	.bottom_nav ul li.shuidian i{
+	   width:41px;
+	   height:47px;
+	   background:url(../images/phone/icon08_n.png) no-repeat;
+    }
+	.bottom_nav ul li.hetong.nav_actived i{
+	   width:52px;
+	   height:47px;
+	   background:url(../images/phone/icon05_a.png) no-repeat;
+    }
+	.bottom_nav ul li.jiaofei.nav_actived i{
+	   width:57px;
+	   height:47px;
+	   background:url(../images/phone/icon06_a.png) no-repeat;
+    }
+	.bottom_nav ul li.tuifei.nav_actived i{
+	   width:47px;
+	   height:47px;
+	   background:url(../images/phone/icon07_a.png) no-repeat;
+    }
+	.bottom_nav ul li.shuidian.nav_actived i{
+	   width:41px;
+	   height:47px;
+	   background:url(../images/phone/icon08_a.png) no-repeat;
+    }
+	.center_top_tab{
+		padding:16px 0;
+	}
+	.center_tab_nav ul li a{
+		height:54px;
+		font-size:22px;
+		line-height:54px;
+	}
+	.center_phone_pages .info_text{width:65%;}
+	.center_phone_pages .info_text_building{width:30%;}
+	.center_phone_pages .each_info_tuifei{width:63%;}
+	.each_choose{
+		width:25px;
+		height:25px;
+		margin-left:40px;
+		
+	}
+	.each_choose.normal{background-size:25px auto;}
+	.each_choose.actived{background-size:25px auto;}
+	.read_met_title{
+		margin-top:15px;
+		border-radius:12px;
+		-moz-border-radius:12px;
+		-webkit-border-radius:12px;
+		-ms-border-radius:12px;
+		-o-border-radius:12px;
+	}
+	.read_met_title ul li{
+		font-size:22px;
+		height:57px;
+		line-height:57px;
+	}
+	.feedback_btn a{
+		width:76px;
+		height:76px;
+		background:url(../images/feed_back_icon.png) no-repeat;
+	}
+	.feedback_btn em{
+		width:76px;
+		height:76px;
+		background:url(../images/go_top_icon.png) no-repeat;
+	}
+}
