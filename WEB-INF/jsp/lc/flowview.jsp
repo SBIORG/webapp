@@ -29,7 +29,7 @@
     <div class="message_goback">
       <a href="${pageContext.request.contextPath}/lc/list.action"> < <span>${map['flow_info'].flow_name }</span></a>
     </div>
-    <jsp:include page="/WEB-INF/jsp/flowview/decoration.jsp" flush="true"/>
+    <jsp:include page="/WEB-INF/jsp/flowview/${map['flow_info'].flow_sign}.jsp" flush="true"/>
    
   </div>
   <!--底部栏-->
