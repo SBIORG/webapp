@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <c:set var="ctx" value="${pageContext.request.contextPath}"/>
-  
-  
     <!--审批业务名称及返回按钮-->
     <!--业务-->
     <div class="phone_work_sp">
