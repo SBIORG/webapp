@@ -1,11 +1,17 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html;charset=UTF-8"%>
+<%@ include file="/taglibs.jsp"%>
+
     <!--审批业务名称及返回按钮-->
     <!--业务-->
     <div class="phone_work_sp">
       <div class="inner_content">
         <!--审批业务-->
         <div class="each_box">
-          <h1 class="each_h1"><c:if test="${map['decoration_info'].is_lessee=="1" }">租户</c:if><c:if test="${map['decoration_info'].is_lessee=="0" }">业主</c:if>信息</h1>
+          <h1 class="each_h1">
+          <c:choose>
+          	<c:when test="${map['decoration_info'].is_lessee == '1'}">租户</c:when>
+          	<c:otherwise>业主</c:otherwise>
+          </c:choose>信息</h1>
           <div class="clearfix each_info">
              <table>
                <tr>
@@ -42,8 +48,8 @@
                </tr>
                <c:forEach var='fee' items='${otherFees}' varStatus='status'>
                <tr>
-                 <td class="info_title">${status.index }【${fee.fee_name }】</td>
-                 <td class="info_words">${fee.fee_value }</td>
+                 <td class="info_title">【<c:out value="${fee.fee_name}"/>】</td>
+                 <td class="info_words"><c:out value="${fee.fee_value}"/></td>
                </tr>
                </c:forEach>
                  <tr>

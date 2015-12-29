@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<c:set var="ctx" value="${pageContext.request.contextPath}"/>
+<%@ page contentType="text/html;charset=UTF-8"%>
+<%@ include file="/taglibs.jsp"%>
 <!--content-->
 <form action="${pageContext.request.contextPath}/lc/handle.action" method="post">
 <input type="hidden" name='audit_status' value='nopass'>

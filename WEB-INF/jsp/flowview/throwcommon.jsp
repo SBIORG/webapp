@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<c:set var="ctx" value="${pageContext.request.contextPath}"/>
+<%@ page contentType="text/html;charset=UTF-8"%>
+<%@ include file="/taglibs.jsp"%>
   
     <!--审批业务名称及返回按钮-->
     <!--业务-->
@@ -7,7 +7,12 @@
       <div class="inner_content">
         <!--审批业务-->
         <div class="each_box">
-          <h1 class="each_h1"><c:if test="${map['throw_info'].is_lessee=="1" }">租户</c:if><c:if test="${map['throw_info'].is_lessee=="0" }">业主</c:if>信息</h1>
+          <h1 class="each_h1">
+          <c:choose>
+          	<c:when test="${map['throw_info'].is_lessee == '1'}">租户</c:when>
+          	<c:otherwise>业主</c:otherwise>
+          </c:choose>
+          信息</h1>
           <div class="clearfix each_info">
              <table>
                <tr>
