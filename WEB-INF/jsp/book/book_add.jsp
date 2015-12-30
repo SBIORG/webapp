@@ -131,10 +131,10 @@ function getBuildInfo(){
 				$('.building_num ul li').each(function(){
 					sum+=$(this).width();
 				})
-				//
 				var ul_width = $('.building_num ul li').length*parseFloat($('.building_num ul li').css("marginRight"))+sum+5;
 				$('.building_num ul').width(ul_width);
 				//
+				var myScroll_h;
 				$("#buildlistbox li").bind(touchend,function(){
 					$("#buildlistbox a").removeClass("actived");
 					$(this).find('a').addClass("actived");
@@ -148,6 +148,8 @@ function getBuildInfo(){
 					getHouseList($(this).attr("data-id")); 
 					$('.slide_btn').removeClass('click');
 					$('.popDiv').hide();
+					var li_length = $('.buildlistbox ul li').width()+parseFloat($('.buildlistbox ul li').css('marginRight'));
+			        myScroll_h.scrollTo(-(li_length*$(this).index()), 0, 200);
 				});
 				getHouseList(build_id);
 			}
@@ -162,11 +164,6 @@ function getBuildInfo(){
 	 
 	  searchUrl = '${pageContext.request.contextPath}/lc/search.action';
       getBuildInfo();
-      
- 	
-	 
-	  
-	  
  });
 </script>
 <div class="content" id="select-house-content">
@@ -219,19 +216,10 @@ function getBuildInfo(){
 		setTimeout(function () {
             myScroll_h =new iScroll("slider_box",{hScrollbar:false, vScrollbar:false, bounce:false}); 
         }, 100);
-		//myScroll_v =new iScroll("wrapper",{hScrollbar:false, vScrollbar:false, bounce:false}); 
-		
 	}
 	//document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 	//document.addEventListener('DOMContentLoaded', loaded, false);
 	window.addEventListener('load', loaded, false);
-	$('.buildlistbox ul li').each(function(i){
-		alert(45);
-		$(this).bind(touchstart,function(){
-		     var li_length = $('.buildlistbox ul li').width()+parseFloat($('.buildlistbox ul li').css('marginRight'));
-			 myScroll_h.scrollTo(-(li_length*i), 0, 200);
-	    })
-	})
 	</script>
   
   <div class="content" id="book_submit_box" style=" display:none;">
