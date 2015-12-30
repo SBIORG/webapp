@@ -225,6 +225,12 @@ function getBuildInfo(){
 	//document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 	//document.addEventListener('DOMContentLoaded', loaded, false);
 	window.addEventListener('load', loaded, false);
+	$('.buildlistbox ul li').each(function(i){
+		$(this).bind(touchend,function(){
+		     var li_length = $('.buildlistbox ul li').width()+parseFloat($('.buildlistbox ul li').css('marginRight'));
+			 myScroll_h.scrollTo(-(li_length*i), 0, 200);
+	    })
+	})
 	</script>
   
   <div class="content" id="book_submit_box" style=" display:none;">
