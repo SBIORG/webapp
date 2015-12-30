@@ -2,7 +2,16 @@
 <%@ include file="/taglibs.jsp"%>
   
   <script>
-  
+    var myScroll_h;
+	function loaded() {
+		setTimeout(function () {
+            myScroll_h =new iScroll("slider_box",{hScrollbar:false, vScrollbar:false, bounce:false}); 
+        }, 100);
+	}
+	
+	//document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+	//document.addEventListener('DOMContentLoaded', loaded, false);
+	window.addEventListener('load', loaded, false);
   //function alert(){alert('343434');}
  function getHouseList(build_id)
   {
@@ -134,7 +143,7 @@ function getBuildInfo(){
 				var ul_width = $('.building_num ul li').length*parseFloat($('.building_num ul li').css("marginRight"))+sum+5;
 				$('.building_num ul').width(ul_width);
 				//
-				var myScroll_h;
+				//var myScroll_h;
 				$("#buildlistbox li").bind(touchend,function(){
 					$("#buildlistbox a").removeClass("actived");
 					$(this).find('a').addClass("actived");
@@ -217,6 +226,7 @@ function getBuildInfo(){
             myScroll_h =new iScroll("slider_box",{hScrollbar:false, vScrollbar:false, bounce:false}); 
         }, 100);
 	}
+	
 	//document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 	//document.addEventListener('DOMContentLoaded', loaded, false);
 	window.addEventListener('load', loaded, false);
