@@ -227,6 +227,7 @@ function getBuildInfo(){
 	window.addEventListener('load', loaded, false);
 	$('.buildlistbox ul li').each(function(i){
 		$(this).bind(touchend,function(){
+			 alert('3434');
 		     var li_length = $('.buildlistbox ul li').width()+parseFloat($('.buildlistbox ul li').css('marginRight'));
 			 myScroll_h.scrollTo(-(li_length*i), 0, 200);
 	    })
