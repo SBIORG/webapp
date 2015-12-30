@@ -137,8 +137,10 @@ function getBuildInfo(){
 				$(".buildlistbox").eq(1).append(buildHtml_b);
 				//计算ul的宽度
 				var sum=0;
+				var li_width;
 				$('.building_num ul li').each(function(){
 					sum+=$(this).width();
+					li_width = $(this).width()
 				})
 				var ul_width = $('.building_num ul li').length*parseFloat($('.building_num ul li').css("marginRight"))+sum+5;
 				$('.building_num ul').width(ul_width);
@@ -151,13 +153,15 @@ function getBuildInfo(){
 					getHouseList($(this).attr("data-id")); 
 				});
 				$("#buildlistbox1 li").bind(touchend,function(){
-					$("#buildlistbox1 a").removeClass("actived");
-					$(this).find('a').addClass("actived");
+				//	$("#buildlistbox1 a").removeClass("actived");
+				//	$(this).find('a').addClass("actived");
 					$('.fixed_button').hide();
 					getHouseList($(this).attr("data-id")); 
 					$('.slide_btn').removeClass('click');
 					$('.popDiv').hide();
-					var li_length = $(this).width()+parseFloat($(this).css('marginRight'));
+					var li_length = parseFloat($(this).width())+parseFloat($(this).css('marginRight'));
+					alert(li_width);
+					alert(parseFloat($(this).width()));
 					alert($(this).index());
 					alert(li_length);
 			        myScroll_h.scrollTo(-(li_length*$(this).index()), 0, 200);
