@@ -187,6 +187,7 @@
 				  $('#choose_house').bind(touchend,function(){
 					  $('#select-house-content').hide();
 					  $('#page-footer').hide();
+					  $('.bottom_nav').hide();
 					  $('#book_submit_box').show();
 					  setTimeout(function () {
 							$('.apply_submit').show();}, 100);
@@ -276,7 +277,7 @@ function getBuildInfo(){
 					//alert(parseFloat($(this).width()));
 					//alert($(this).index());
 					//alert(li_length);
-			        myScroll_h.scrollTo(-(li_length*$(this).index()), 0, 200);
+			        myScroll_h.scrollTo(-(li_width*$(this).index()), 0, 200);
 				});
 				getHouseList(build_id);
 			}
