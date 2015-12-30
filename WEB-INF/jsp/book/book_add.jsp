@@ -266,17 +266,13 @@ function getBuildInfo(){
 					getHouseList($(this).attr("data-id")); 
 				});
 				$("#buildlistbox1 li").bind(touchend,function(){
-				//	$("#buildlistbox1 a").removeClass("actived");
-				//	$(this).find('a').addClass("actived");
+					var i = $(this).index();
+				    $("#buildlistbox li").eq(i).find('a').addClass("actived");
 					$('.fixed_button').hide();
 					getHouseList($(this).attr("data-id")); 
 					$('.slide_btn').removeClass('click');
 					$('.popDiv').hide();
 					var li_length = parseFloat($(this).width())+parseFloat($(this).css('marginRight'));
-					//alert(li_width);
-					//alert(parseFloat($(this).width()));
-					//alert($(this).index());
-					//alert(li_length);
 			        myScroll_h.scrollTo(-(li_width*$(this).index()), 0, 200);
 				});
 				getHouseList(build_id);
