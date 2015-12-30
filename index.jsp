@@ -1,7 +1,5 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<c:set var="ctx" value="${pageContext.request.contextPath}"/>
+<%@ page contentType="text/html;charset=UTF-8"%>
+<%@ include file="/taglibs.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,6 +16,27 @@
 <script src="<%=request.getContextPath()%>/resources/js/iscroll.js" type="text/javascript"></script>
 <script src="<%=request.getContextPath()%>/resources/js/main.js" type="text/javascript"></script>
 </head>
+<body>
+<div class="content" id="select-house-content">
+	<!--意见反馈-->
+	<div class="feedback_btn"><a></a></div>
+    <!--意见反馈-->
+    
+    <!--头部导航-->
+   	<div class="top_nav clearfix">
+    	<div class="building_num" id="slider_box"><ul class="clearfix buildlistbox" id="buildlistbox" style="width:2000px;"></ul></div>
+      	<em class="slide_btn"></em>
+        <!--弹出层-->
+      	<div class="popDiv" style="display:none;"><ul class="buildlistbox" id="buildlistbox1"></ul></div>
+    </div>
+    <!--头部导航-->
+    
+    <div class="house_wrappe">
+      <!--房源信息-->
+      <div class="house_box" id="hosuelistbox"></div>
+      <!--房源信息-->
+	</div>
+</div>
   <script>
   
   //function alert(){alert('343434');}
@@ -144,42 +163,5 @@ function getBuildInfo(){
 	  
  });
 </script>
-<body>
-<!--当前用户：${userInfo.username } -->
-<div class="content" id="select-house-content">
-	<!--意见反馈-->
-	<div class="feedback_btn"><a></a></div>
-    <!--意见反馈-->
-    
-    <!--头部导航-->
-   	<div class="top_nav clearfix">
-    	<div class="building_num" id="slider_box"><ul class="clearfix buildlistbox" id="buildlistbox" style="width:2000px;"></ul></div>
-      	<em class="slide_btn"></em>
-        <!--弹出层-->
-      	<div class="popDiv" style="display:none;"><ul class="buildlistbox" id="buildlistbox1"></ul></div>
-    </div>
-    <!--头部导航-->
-    
-    <div class="house_wrappe">
-      <!--房源信息-->
-      <div class="house_box" id="hosuelistbox"></div>
-      <!--房源信息-->
-	</div>
-</div>
-
-
-<!--底部栏-->
-<div id="page-footer">   
-    <!--页面公用底部导航-->
-    <div class="bottom_nav"><!--导航选中效果加class：nav_actived-->
-    	<ul>
-        	<li class="fangyuan nav_actived"><a><i></i><p>房源</p></a></li>
-        	<li class="yuding"><a  href="${pageContext.request.contextPath}/lc/start.action?flowSign=book"><i></i><p>预定</p></a></li>
-        	<li class="yewu"><a href="${pageContext.request.contextPath}/lc/list.action"><i></i><p>业务</p></a></li>
-        	<li class="chaobiao"><a><i></i><p>抄表</p></a></li>
-		</ul>
-    </div>
-</div>
-
 </body>
 </html>

@@ -1,7 +1,128 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
 <%@ include file="/taglibs.jsp"%>
   
+ 
+<div class="content" id="select-house-content">
+	<!--意见反馈-->
+	<div class="feedback_btn"><a></a></div>
+    <!--意见反馈-->
+    
+    <!--头部导航-->
+   	<div class="top_nav clearfix">
+    	<div class="building_num" id="slider_box"><ul class="clearfix buildlistbox" id="buildlistbox" style="width:2000px;"></ul></div>
+      	<em class="slide_btn"></em>
+        <!--弹出层-->
+      	<div class="popDiv" style="display:none;"><ul class="buildlistbox" id="buildlistbox1"></ul></div>
+    </div>
+    <!--头部导航-->
+    
+    <div class="house_wrappe">
+      <!--房源信息-->
+      <div class="house_box" id="hosuelistbox"></div>
+      <!--房源信息-->
+	</div>
+</div>
+
+
+<!--底部栏-->
+<div id="page-footer">   
+    <!--房源预定页面的预定提交按钮-->
+    <div class="fixed_button" style="display:none;">
+        <p class="button_value" id="choose_house"><input type="submit" value="确认选择"><i></i></p>
+        <em></em>
+    </div>
+  	<!--房源预定页面的预定提交按钮-->
+    <!--页面公用底部导航-->
+    <div class="bottom_nav"><!--导航选中效果加class：nav_actived-->
+    	<ul>
+        	<li class="fangyuan"><a><i></i><p>房源</p></a></li>
+        	<li class="yuding nav_actived"><a  href="${pageContext.request.contextPath}/lc/start.action?flowSign=book"><i></i><p>预定</p></a></li>
+        	<li class="yewu"><a href="${pageContext.request.contextPath}/lc/list.action"><i></i><p>业务</p></a></li>
+        	<li class="chaobiao"><a><i></i><p>抄表</p></a></li>
+		</ul>
+    </div>
+</div>
+    <!--页面公用底部导航-->
+  <!--底部栏-->
+  <!--content-->
+  <script src="js/iscroll.js"></script>
   <script>
+    var myScroll_h;
+	function loaded() {
+		setTimeout(function () {
+            myScroll_h =new iScroll("slider_box",{hScrollbar:false, vScrollbar:false, bounce:false}); 
+        }, 100);
+	}
+	
+	//document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+	//document.addEventListener('DOMContentLoaded', loaded, false);
+	window.addEventListener('load', loaded, false);
+	</script>
+  
+  <div class="content" id="book_submit_box" style=" display:none;">
+      <!--意见反馈-->
+      <div class="feedback_btn">
+        <a></a>
+      </div>
+      <!--意见反馈-->
+    <div class="inner">
+    <form action="${pageContext.request.contextPath}/lc/handle.action" method="post">
+      <div class="apply_box">
+         <h1>预定信息</h1>
+         <div class="apply_form">
+            <div class="in">
+               <div class="apply_input_box">
+                 <label>客户名：</label>
+                 <input type="text" name="lessee_data[lessee_name]"  class="input">
+                 <em></em>
+               </div>
+               <div class="apply_input_box">
+                 <label>联系人：</label>
+                 <input type="text" name="lessee_data[contact]" class="input">
+                 <em></em>
+               </div>
+               <div class="apply_input_box">
+                 <label>手机：</label>
+                 <input type="tel"  name="lessee_data[mobile]" class="input">
+                 <em></em>
+               </div>
+              
+               <div class="apply_input_box short">
+                 <label>预订订金：</label>
+                 <input type="text"  name="book_data[book_fee]" class="input">
+                 <em></em>
+                 <i>元</i>
+               </div>
+               
+               <div class="apply_input_box">
+                 <label>入住时间：</label>
+                 <input type="text" name="book_data[holp_date]" class="input" id="USER_AGE1">
+                 <em></em>
+               </div>
+               <div class="apply_input_box clearfix">
+                 <label class="fl">房屋：</label>
+                 <span class="house_show fl" id="showhouseno"></span>
+               </div>
+            </div>
+           
+              
+            <input type="hidden" name='user_id' value="${userInfo.user_id}">
+            <input type="hidden" name='agency_id' value="${userInfo.agency_id }">
+            <input type="hidden" name='agency_name' value="${userInfo.agency_name }">
+            <!-- 需要js获取值 -->
+            <input type="hidden" class='hidden_house_id' name='house_ids[]' value='' />
+            
+    <input id='loan_user_id'  type="hidden" name='lessee_data[user_id]' value=0 />
+    <input type='hidden' name='task_flg' value=1 >
+    <input type="hidden" id='executed_id' name='executed_id' value="${flow.executed_id }" />
+    <input type="hidden" id='xml_model_id' name='xml_model_id' value="${flow.xml_model_id }">
+            <input type="submit" style="-webkit-appearance:none; -webkit-border-radius:0; display:none;" class="apply_submit" value="提交预定">
+         </div>
+      </div>
+      </form>
+    </div>
+  </div>
+   <script>
     var myScroll_h;
 	function loaded() {
 		setTimeout(function () {
@@ -181,127 +302,6 @@ function getBuildInfo(){
       getBuildInfo();
  });
 </script>
-<div class="content" id="select-house-content">
-	<!--意见反馈-->
-	<div class="feedback_btn"><a></a></div>
-    <!--意见反馈-->
-    
-    <!--头部导航-->
-   	<div class="top_nav clearfix">
-    	<div class="building_num" id="slider_box"><ul class="clearfix buildlistbox" id="buildlistbox" style="width:2000px;"></ul></div>
-      	<em class="slide_btn"></em>
-        <!--弹出层-->
-      	<div class="popDiv" style="display:none;"><ul class="buildlistbox" id="buildlistbox1"></ul></div>
-    </div>
-    <!--头部导航-->
-    
-    <div class="house_wrappe">
-      <!--房源信息-->
-      <div class="house_box" id="hosuelistbox"></div>
-      <!--房源信息-->
-	</div>
-</div>
-
-
-<!--底部栏-->
-<div id="page-footer">   
-    <!--房源预定页面的预定提交按钮-->
-    <div class="fixed_button" style="display:none;">
-        <p class="button_value" id="choose_house"><input type="submit" value="确认选择"><i></i></p>
-        <em></em>
-    </div>
-  	<!--房源预定页面的预定提交按钮-->
-    <!--页面公用底部导航-->
-    <div class="bottom_nav"><!--导航选中效果加class：nav_actived-->
-    	<ul>
-        	<li class="fangyuan"><a><i></i><p>房源</p></a></li>
-        	<li class="yuding nav_actived"><a  href="${pageContext.request.contextPath}/lc/start.action?flowSign=book"><i></i><p>预定</p></a></li>
-        	<li class="yewu"><a href="${pageContext.request.contextPath}/lc/list.action"><i></i><p>业务</p></a></li>
-        	<li class="chaobiao"><a><i></i><p>抄表</p></a></li>
-		</ul>
-    </div>
-</div>
-    <!--页面公用底部导航-->
-  <!--底部栏-->
-  <!--content-->
-  <script src="js/iscroll.js"></script>
-  <script>
-    var myScroll_h;
-	function loaded() {
-		setTimeout(function () {
-            myScroll_h =new iScroll("slider_box",{hScrollbar:false, vScrollbar:false, bounce:false}); 
-        }, 100);
-	}
-	
-	//document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-	//document.addEventListener('DOMContentLoaded', loaded, false);
-	window.addEventListener('load', loaded, false);
-	</script>
-  
-  <div class="content" id="book_submit_box" style=" display:none;">
-      <!--意见反馈-->
-      <div class="feedback_btn">
-        <a></a>
-      </div>
-      <!--意见反馈-->
-    <div class="inner">
-    <form action="${pageContext.request.contextPath}/lc/handle.action" method="post">
-      <div class="apply_box">
-         <h1>预定信息</h1>
-         <div class="apply_form">
-            <div class="in">
-               <div class="apply_input_box">
-                 <label>客户名：</label>
-                 <input type="text" name="lessee_data[lessee_name]"  class="input">
-                 <em></em>
-               </div>
-               <div class="apply_input_box">
-                 <label>联系人：</label>
-                 <input type="text" name="lessee_data[contact]" class="input">
-                 <em></em>
-               </div>
-               <div class="apply_input_box">
-                 <label>手机：</label>
-                 <input type="tel"  name="lessee_data[mobile]" class="input">
-                 <em></em>
-               </div>
-              
-               <div class="apply_input_box short">
-                 <label>预订订金：</label>
-                 <input type="text"  name="book_data[book_fee]" class="input">
-                 <em></em>
-                 <i>元</i>
-               </div>
-               
-               <div class="apply_input_box">
-                 <label>入住时间：</label>
-                 <input type="text" name="book_data[holp_date]" class="input" id="USER_AGE1">
-                 <em></em>
-               </div>
-               <div class="apply_input_box clearfix">
-                 <label class="fl">房屋：</label>
-                 <span class="house_show fl" id="showhouseno"></span>
-               </div>
-            </div>
-           
-              
-            <input type="hidden" name='user_id' value="${userInfo.user_id}">
-            <input type="hidden" name='agency_id' value="${userInfo.agency_id }">
-            <input type="hidden" name='agency_name' value="${userInfo.agency_name }">
-            <!-- 需要js获取值 -->
-            <input type="hidden" class='hidden_house_id' name='house_ids[]' value='' />
-            
-    <input id='loan_user_id'  type="hidden" name='lessee_data[user_id]' value=0 />
-    <input type='hidden' name='task_flg' value=1 >
-    <input type="hidden" id='executed_id' name='executed_id' value="${flow.executed_id }" />
-    <input type="hidden" id='xml_model_id' name='xml_model_id' value="${flow.xml_model_id }">
-            <input type="submit" style="-webkit-appearance:none; -webkit-border-radius:0; display:none;" class="apply_submit" value="提交预定">
-         </div>
-      </div>
-      </form>
-    </div>
-  </div>
-  
   <script src="<%=request.getContextPath()%>/resources/js/mobiscroll_date.js" type="text/javascript"></script>
   <script src="<%=request.getContextPath()%>/resources/js/mobiscroll.js" type="text/javascript"></script>
   
