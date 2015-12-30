@@ -160,10 +160,10 @@ function getBuildInfo(){
 					$('.slide_btn').removeClass('click');
 					$('.popDiv').hide();
 					var li_length = parseFloat($(this).width())+parseFloat($(this).css('marginRight'));
-					alert(li_width);
-					alert(parseFloat($(this).width()));
-					alert($(this).index());
-					alert(li_length);
+					//alert(li_width);
+					//alert(parseFloat($(this).width()));
+					//alert($(this).index());
+					//alert(li_length);
 			        myScroll_h.scrollTo(-(li_length*$(this).index()), 0, 200);
 				});
 				getHouseList(build_id);
