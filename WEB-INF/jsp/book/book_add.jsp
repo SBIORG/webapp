@@ -158,6 +158,8 @@ function getBuildInfo(){
 					$('.slide_btn').removeClass('click');
 					$('.popDiv').hide();
 					var li_length = $('.buildlistbox ul li').width()+parseFloat($('.buildlistbox ul li').css('marginRight'));
+					alert($(this).index());
+					alert(li_length);
 			        myScroll_h.scrollTo(-(li_length*$(this).index()), 0, 200);
 				});
 				getHouseList(build_id);
