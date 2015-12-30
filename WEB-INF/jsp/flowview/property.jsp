@@ -7,7 +7,7 @@
       <div class="inner_content">
         <!--审批业务-->
         <div class="each_box">
-          <h1 class="each_h1">租户信息</h1>
+          <h1 class="each_h1">客户信息</h1>
           <div class="clearfix each_info">
              <table>
                <tr>

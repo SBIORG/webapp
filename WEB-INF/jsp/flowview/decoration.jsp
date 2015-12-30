@@ -49,7 +49,7 @@
                <c:forEach var='fee' items='${otherFees}' varStatus='status'>
                <tr>
                  <td class="info_title">【${fee.fee_name }】</td>
-                 <td class="info_words">${fee.fee_value }</td>
+                 <td class="info_words">${fee.fee_value }元</td>
                </tr>
                </c:forEach>
                  <tr>
