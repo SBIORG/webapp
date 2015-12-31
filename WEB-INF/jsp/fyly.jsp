@@ -106,6 +106,7 @@
     <input name="user_id" type="hidden" value="${userInfo.user_id }"><!--session的用户ID-->
     <input name="op_name" type="hidden" value="${userInfo.username }"><!--session的用户名称-->
     <input name="house_id" type="hidden" value="${param.houseId}"><!--get的房屋ID-->
+    <input name="house_no" type="hidden" value="${param.houseNO}"><!--get的房屋ID-->
     <div class="messages_box">
       <textarea class="leave_message" name="content" placeholder="留言"></textarea>
     </div>
