@@ -267,12 +267,18 @@ function getBuildInfo(){
 				});
 				$("#buildlistbox1 li").bind(touchend,function(){
 					var i = $(this).index();
+					$("#buildlistbox a").removeClass("actived");
 				    $("#buildlistbox li").eq(i).find('a').addClass("actived");
 					$('.fixed_button').hide();
 					getHouseList($(this).attr("data-id")); 
 					$('.slide_btn').removeClass('click');
 					$('.popDiv').hide();
-					var li_length = parseFloat(li_width)+parseFloat($(this).css('marginRight'));
+					var li_length = $(this).width()+parseFloat($(this).css('marginRight'));
+					alert($(this).width());
+					alert(parseInt(li_width));
+					alert(parseFloat($(this).css('marginRight')));
+					alert(li_length);
+					alert($(this).index());
 			        myScroll_h.scrollTo(-(li_length*$(this).index()), 0, 200);
 				});
 				getHouseList(build_id);
