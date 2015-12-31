@@ -38,6 +38,16 @@
 	</div>
 </div>
   <script>
+    var myScroll_h;
+	function loaded() {
+		setTimeout(function () {
+            myScroll_h =new iScroll("slider_box",{hScrollbar:false, vScrollbar:false, bounce:false}); 
+        }, 100);
+	}
+	
+	//document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+	//document.addEventListener('DOMContentLoaded', loaded, false);
+	window.addEventListener('load', loaded, false);
   var houseMsgUrl = "${pageContext.request.contextPath}/msglist.action";
   //function alert(){alert('343434');}
  function getHouseList(build_id)
@@ -125,7 +135,6 @@ function getBuildInfo(){
 				$('.building_num ul li').each(function(){
 					sum+=$(this).width();
 				})
-				//
 				var ul_width = $('.building_num ul li').length*parseFloat($('.building_num ul li').css("marginRight"))+sum+5;
 				$('.building_num ul').width(ul_width);
 				//
@@ -136,12 +145,20 @@ function getBuildInfo(){
 					getHouseList($(this).attr("data-id")); 
 				});
 				$("#buildlistbox1 li").bind(touchend,function(){
-					$("#buildlistbox1 a").removeClass("actived");
-					$(this).find('a').addClass("actived");
+					var li_length=0;
+					var i = $(this).index();
+					$("#buildlistbox a").removeClass("actived");
+				    $("#buildlistbox li").eq(i).find('a').addClass("actived");
 					$('.fixed_button').hide();
 					getHouseList($(this).attr("data-id")); 
 					$('.slide_btn').removeClass('click');
 					$('.popDiv').hide();
+					for(var j=0; j<i; j++)
+				    {
+					    li_length += parseFloat($("#buildlistbox li").eq(j).width())+parseFloat($(this).css('marginRight'));
+				    }
+				    myScroll_h.scrollTo(-(li_length), 0, 200);
+				    li_length=0;
 				});
 				getHouseList(build_id);
 			}
