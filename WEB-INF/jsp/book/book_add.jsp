@@ -256,7 +256,7 @@ function getBuildInfo(){
 				var ul_width = $('.building_num ul li').length*parseFloat($('.building_num ul li').css("marginRight"))+sum+5;
 				$('.building_num ul').width(ul_width);
 				//
-				var li_length;
+				
 				$("#buildlistbox li").bind(touchend,function(){
 					$("#buildlistbox a").removeClass("actived");
 					$(this).find('a').addClass("actived");
@@ -264,6 +264,7 @@ function getBuildInfo(){
 					getHouseList($(this).attr("data-id")); 
 				});
 				$("#buildlistbox1 li").bind(touchend,function(){
+					var li_length=0;
 					var i = $(this).index();
 					$("#buildlistbox a").removeClass("actived");
 				    $("#buildlistbox li").eq(i).find('a').addClass("actived");
