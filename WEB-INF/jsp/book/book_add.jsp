@@ -250,15 +250,13 @@ function getBuildInfo(){
 				$(".buildlistbox").eq(1).append(buildHtml_b);
 				//计算ul的宽度
 				var sum=0;
-				var li_width;
 				$('.building_num ul li').each(function(){
 					sum+=$(this).width();
-					li_width = $(this).width()
 				})
 				var ul_width = $('.building_num ul li').length*parseFloat($('.building_num ul li').css("marginRight"))+sum+5;
 				$('.building_num ul').width(ul_width);
 				//
-				//var myScroll_h;
+				
 				$("#buildlistbox li").bind(touchend,function(){
 					$("#buildlistbox a").removeClass("actived");
 					$(this).find('a').addClass("actived");
@@ -266,14 +264,20 @@ function getBuildInfo(){
 					getHouseList($(this).attr("data-id")); 
 				});
 				$("#buildlistbox1 li").bind(touchend,function(){
+					var li_length=0;
 					var i = $(this).index();
+					$("#buildlistbox a").removeClass("actived");
 				    $("#buildlistbox li").eq(i).find('a').addClass("actived");
 					$('.fixed_button').hide();
 					getHouseList($(this).attr("data-id")); 
 					$('.slide_btn').removeClass('click');
 					$('.popDiv').hide();
-					var li_length = parseFloat(li_width)+parseFloat($(this).css('marginRight'));
-			        myScroll_h.scrollTo(-(li_length*$(this).index()), 0, 200);
+					for(var j=0; j<i; j++)
+				    {
+					    li_length += parseFloat($("#buildlistbox li").eq(j).width())+parseFloat($(this).css('marginRight'));
+				    }
+				    myScroll_h.scrollTo(-(li_length), 0, 200);
+				    li_length=0;
 				});
 				getHouseList(build_id);
 			}
