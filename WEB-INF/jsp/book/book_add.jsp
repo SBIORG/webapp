@@ -256,7 +256,7 @@ function getBuildInfo(){
 				var ul_width = $('.building_num ul li').length*parseFloat($('.building_num ul li').css("marginRight"))+sum+5;
 				$('.building_num ul').width(ul_width);
 				//
-				//var myScroll_h;
+				var li_length;
 				$("#buildlistbox li").bind(touchend,function(){
 					$("#buildlistbox a").removeClass("actived");
 					$(this).find('a').addClass("actived");
@@ -271,8 +271,13 @@ function getBuildInfo(){
 					getHouseList($(this).attr("data-id")); 
 					$('.slide_btn').removeClass('click');
 					$('.popDiv').hide();
-					var li_length = $("#buildlistbox li").eq(i).width()+parseFloat($(this).css('marginRight'));
-			        myScroll_h.scrollTo(-(li_length*$(this).index()), 0, 200);
+					for(var j=0; j<i; j++)
+				    {
+					    li_length += parseFloat($("#buildlistbox li").eq(j).width())+parseFloat($(this).css('marginRight'));
+				    }
+				    alert(li_length);
+				    myScroll_h.scrollTo(-(li_length), 0, 200);
+				    li_length=0;
 				});
 				getHouseList(build_id);
 			}
