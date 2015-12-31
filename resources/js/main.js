@@ -20,7 +20,8 @@ $(function(){
 	$('.count em').unbind(touchend).bind(touchend, deleteCount);
 	$('.apply_input_box em').unbind(touchend).bind(touchend, deleteCount);
 	$('.password em').unbind(touchend).bind(touchend, showPassword);
-	
+	//
+	$('.ywsp_button').eq(1).addClass('pass');
 	//init初始化
 	$('.ywsp_button').addClass('feedback_content');
 	$('.fixed_button').addClass('feedback_content');
