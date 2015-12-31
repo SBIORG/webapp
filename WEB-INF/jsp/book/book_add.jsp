@@ -250,10 +250,8 @@ function getBuildInfo(){
 				$(".buildlistbox").eq(1).append(buildHtml_b);
 				//计算ul的宽度
 				var sum=0;
-				var li_width;
 				$('.building_num ul li').each(function(){
 					sum+=$(this).width();
-					li_width = $(this).width()
 				})
 				var ul_width = $('.building_num ul li').length*parseFloat($('.building_num ul li').css("marginRight"))+sum+5;
 				$('.building_num ul').width(ul_width);
@@ -273,8 +271,8 @@ function getBuildInfo(){
 					getHouseList($(this).attr("data-id")); 
 					$('.slide_btn').removeClass('click');
 					$('.popDiv').hide();
-					var li_length = $(this).width()+parseFloat($(this).css('marginRight'));
-					alert($(this).width());
+					var li_length = $("#buildlistbox li").eq(i).width()+parseFloat($(this).css('marginRight'));
+					alert($("#buildlistbox li").eq(i).width());
 					alert(parseInt(li_width));
 					alert(parseFloat($(this).css('marginRight')));
 					alert(li_length);
