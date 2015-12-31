@@ -102,10 +102,10 @@
   </div>
   <!--底部留言框和提交按钮-->
   <div class="bottom_submit">
-  	<form action="" method="post">
-    <input name="user_id" type="hidden" value=""><!--session的用户ID-->
-    <input name="op_name" type="hidden" value=""><!--session的用户名称-->
-    <input name="house_id" type="hidden" value=""><!--get的房屋ID-->
+  	<form action="${pageContext.request.contextPath}/msgadd.action" method="post">
+    <input name="user_id" type="hidden" value="${userInfo.user_id }"><!--session的用户ID-->
+    <input name="op_name" type="hidden" value="${userInfo.username }"><!--session的用户名称-->
+    <input name="house_id" type="hidden" value="${param.houseId}"><!--get的房屋ID-->
     <div class="messages_box">
       <textarea class="leave_message" name="content" placeholder="留言"></textarea>
     </div>
