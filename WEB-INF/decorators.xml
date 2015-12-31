@@ -3,7 +3,7 @@
     <!-- Any urls that are excluded will never be decorated by Sitemesh -->
     <excludes>
         <pattern>/exclude.jsp</pattern>
-        <pattern>/exclude/*</pattern>
+        <pattern>/msglist*</pattern>
     </excludes>
 
     <decorator name="main" page="main.jsp">
