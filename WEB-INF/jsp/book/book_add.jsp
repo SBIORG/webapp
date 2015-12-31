@@ -275,7 +275,6 @@ function getBuildInfo(){
 				    {
 					    li_length += parseFloat($("#buildlistbox li").eq(j).width())+parseFloat($(this).css('marginRight'));
 				    }
-				    alert(li_length);
 				    myScroll_h.scrollTo(-(li_length), 0, 200);
 				    li_length=0;
 				});
