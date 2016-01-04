@@ -21,7 +21,7 @@
 </style>
 
 <body>
-<form method="post" action="${pageContext.request.contextPath}/feedbackadd.action" enctype="multipart/form-data">
+<form method="post" id="fankuiFrom" action="${pageContext.request.contextPath}/feedbackadd.action" enctype="multipart/form-data">
   <!--content-->
   <div class="content">
       <!--意见反馈-->
@@ -48,9 +48,7 @@
               <textarea class="write_meter_txt write_meter_txt_height" style="display:block;" name="detail" placeholder="详细描述..."></textarea>
             </div>
             <div class="meter_box clearfix">
-               <div class="J-fileUploadTpl" data-name="img">
-                 
-               </div>
+               <iframe id="uploadIframe" scrolling="no" src="http://beta.xinwubao.com/weixin/file/index?user_id=1788"></iframe>
             </div>
           </div>
         </div>
@@ -65,18 +63,26 @@
   <div class="bottom_content">
     <!--反馈信息提交按钮-->
       <div class="fixed_button">
-        <p class="button_value"><input type="submit" value="提交反馈信息"></p>
+        <p class="button_value"><input id="fankuiSubmit" type="button" value="提交反馈信息"></p>
+        <script>
+		$("#fankuiSubmit").click(function(){
+			alert($(window.frames["uploadIframe"].document).html());
+			alert($(window.frames["uploadIframe"].document).find("input[@type='hidden']").attr('name'));
+			$(window.frames["uploadIframe"].document).find("input[@type='hidden']").each(function(){
+				alert($(this).val())
+			});
+			
+			//$("#fankuiFrom").append(html);
+			//return false;
+		});
+		
+		</script>
       </div>
   	<!--反馈信息提交按钮-->
   </div>
   <!--底部栏-->
   <!--content-->
   </form>
-<link rel="stylesheet" type="text/css" href="js/fileupload/upload.css">
-<script src="js/jquery-ui-1.9.2.custom.min.js"></script>
-<script src="js/underscore.js"></script>
-<script src="js/fileupload/jquery.iframe-transport.js"></script>
-<script src="js/fileupload/jquery.fileupload.js"></script>
-<script src="js/fileupload/jquery.fileupload.default.js"></script>
+
  </body>
 </html>
