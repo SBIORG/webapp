@@ -16,11 +16,7 @@
 <script src="<%=request.getContextPath()%>/resources/js/jquery.touchSwipe.js" type="text/javascript"></script>
 <script src="<%=request.getContextPath()%>/resources/js/iscroll.js" type="text/javascript"></script>
 <script src="<%=request.getContextPath()%>/resources/js/main.js" type="text/javascript"></script>
-<script>
-	
-    document.domain("xinwubao.com");
-	
-</script>
+
 </head>
 <style>
 </style>
@@ -70,9 +66,21 @@
       <div class="fixed_button">
         <p class="button_value"><input id="fankuiSubmit" type="button" value="提交反馈信息"></p>
         <script>
+		var onmessage = function(e) {
+       		var data = e.data;
+       		alert(data);
+    	};
+    	//监听postMessage消息事件
+    	if (typeof window.addEventListener != 'undefined') {
+      		window.addEventListener('message', onmessage, false);
+    	} else if (typeof window.attachEvent != 'undefined') {
+      		window.attachEvent('onmessage', onmessage);
+    	}
+	
+	
 		$("#fankuiSubmit").click(function(){
 			iframe=document.getElementById("uploadIframe");
-			data = iframe.contentWindow.fileImg;
+			data = iframe.contentWindow.name;
 			alert(data);
 			alert($(window.frames["uploadIframe"].document).html());
 			alert($(window.frames["uploadIframe"].document).find("input[@type='hidden']").attr('name'));
