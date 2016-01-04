@@ -39,7 +39,7 @@ if(lm!=null){
              </a>
            </li>
            <li class="chaobiao <c:if test="${lm=='cb'}">nav_actived</c:if>">
-             <a>
+             <a href='${pageContext.request.contextPath}/meterinfo.action?lm=yw'>
               <i></i>
               <p>抄表</p>
              </a>
