@@ -113,6 +113,9 @@
         <!--抄表业务
         循环开始,循环meter_list
         -->
+        
+       <c:choose>
+        <c:when test="${fn:length(meterList)!=0 }">
          <c:forEach var='meter' items='${meterList}' varStatus='status'>
         <form class='meterForm' method="post" action="${pageContext.request.contextPath}/metersubmit.action">
         <input name="user_id" type="hidden" value="${userInfo.user_id}"><!--值为session的用户ID-->
@@ -139,7 +142,11 @@
         抄表业务-->
         </form> 
         </c:forEach>
-        
+        </c:when>
+        <c:otherwise>
+        	本层已抄表或无仪表
+        </c:otherwise>
+        </c:choose>
       </div>
     </div>
     <!--业务-->
