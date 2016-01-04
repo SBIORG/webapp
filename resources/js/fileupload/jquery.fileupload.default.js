@@ -1,4 +1,5 @@
 //-----网站图片上传方式公用模板
+var fh = window.fh = {};
 $(function () {
     $('.J-imgUploadTpl').each(function (i) {
         var self = $(this);
@@ -9,15 +10,15 @@ $(function () {
         var data = {
             i: i,
             name: self.data('name'),
-            img1: img[0] ? '/file/index/id/' + img[0] : '/skin/js/fileupload/prod_default.gif',
-            img2: img[1] ? '/file/index/id/' + img[1] : '/skin/js/fileupload/prod_default.gif',
-            img3: img[2] ? '/file/index/id/' + img[2] : '/skin/js/fileupload/prod_default.gif',
+            img1: img[0] ? '/file/index/id/' + img[0] : 'js/fileupload/prod_default.gif',
+            img2: img[1] ? '/file/index/id/' + img[1] : 'js/fileupload/prod_default.gif',
+            img3: img[2] ? '/file/index/id/' + img[2] : 'js/fileupload/prod_default.gif',
             hiden1: img[0] || '',
             hiden2: img[1] || '',
             hiden3: img[2] || ''
         }
         //alert(JSON.stringify(data));
-        $.get('/skin/tpl/imgupload.html', function (tpl) {
+        $.get('js/fileupload/tpl/imgupload.html', function (tpl) {
             self.html(_.template(tpl, data));
             for (var n = 1; n <= 3; n++) {
                 myImgUpload('#J-img' + n + i, '#J-fileBtn' + n + i, '#J-file' + n + i);
@@ -40,7 +41,7 @@ $(function () {
                     alert('图片格式不正确(gif,jpeg,jpg,png)');
                     return false;
                 }
-                _img.attr('src', "/skin/js/fileupload/loading.gif");
+                _img.attr('src', "js/fileupload/loading.gif");
             },
             done: function (e, data) {
                 //  data.result//上传成功返回的对象数组
@@ -52,8 +53,8 @@ $(function () {
     }
 
     //----文件上传公用
-    fh.getFileupload('.J-fileUploadTpl');
-    fh.getFileupload('.J-fileUploadTplForOne',true);
+    window.fh.getFileupload('.J-fileUploadTpl');
+    window.fh.getFileupload('.J-fileUploadTplForOne',true);
 });
 
 /*
@@ -113,7 +114,7 @@ window.fh.getFileupload = function (dom,oneFile) {
         
 
 
-        $.get('/skin/tpl/fileupload.html', function (tpl) {
+        $.get('js/fileupload/tpl/fileupload.html', function (tpl) {
             //------初始化文件上传html--------
             var initHtml = self.html();
             self.html(_.template(tpl, data));
