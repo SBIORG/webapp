@@ -117,7 +117,7 @@
         <form class='meterForm' method="post" action="${pageContext.request.contextPath}/metersubmit.action">
         <input name="user_id" type="hidden" value="${userInfo.user_id}"><!--值为session的用户ID-->
         <input name="user_name" type="hidden" value="${userInfo.username}"><!--值为session的用户名-->
-        
+        <input type="hidden" name='agency_id' value="${userInfo.agency_id }">
         <div class="each_box">
           <h1 class="each_h1 clearfix">
             <span class=" fl">${meter.house_number }</span> <!--循环中的house_number-->
