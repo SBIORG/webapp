@@ -144,7 +144,7 @@
         </c:forEach>
         </c:when>
         <c:otherwise>
-        	本层已抄表或无仪表
+        	<div style="text-align:center; margin-top:10px;">本层已抄表或无仪表!</div>
         </c:otherwise>
         </c:choose>
       </div>
