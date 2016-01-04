@@ -26,7 +26,7 @@
   <div class="content">
         <!--意见反馈-->
       <div class="feedback_btn">
-        <a></a>
+       <a href="<%=request.getContextPath()%>/yjfk.jsp?url=<%=request.getRequestURI()%>"></a>
       </div>
       <!--意见反馈-->
 

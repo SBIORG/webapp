@@ -4,7 +4,7 @@
  
 <div class="content" id="select-house-content">
 	<!--意见反馈-->
-	<div class="feedback_btn"><a></a></div>
+	<div class="feedback_btn"><a href="<%=request.getContextPath()%>/yjfk.jsp?url=<%=request.getRequestURI()%>"></a></div>
     <!--意见反馈-->
     
     <!--头部导航-->
@@ -53,7 +53,7 @@
   <div class="content" id="book_submit_box" style=" display:none;">
       <!--意见反馈-->
       <div class="feedback_btn">
-        <a></a>
+        <a href="<%=request.getContextPath()%>/yjfk.jsp?url=<%=request.getRequestURI()%>"></a>
       </div>
       <!--意见反馈-->
     <div class="inner">
