@@ -172,37 +172,6 @@
       </ul>
     </div>
     <!--上下层按钮-->
-    <!--页面公用底部导航-->
-      <div class="bottom_nav"><!--导航选中效果加class：nav_actived-->
-         <ul>
-           <li class="fangyuan">
-             <a>
-              <i></i>
-              <p>房源</p>
-             </a>
-           </li>
-           <li class="yuding">
-             <a>
-              <i></i>
-              <p>预定</p>
-             </a>
-           </li>
-           <li class="yewu nav_actived">
-             <a>
-              <i></i>
-              <p>业务</p>
-             </a>
-           </li>
-           <li class="chaobiao">
-             <a>
-              <i></i>
-              <p>抄表</p>
-             </a>
-           </li>
-         </ul>
-      </div>
-    <!--页面公用底部导航-->
-  <!--底部栏-->
-  <!--content-->
+ 
  </body>
 </html>
