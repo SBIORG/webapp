@@ -175,8 +175,11 @@
     <script>
 	$('.save_meter_num').each(function(i){
 	  $(this).bind(touchend,function(){
-			var url =  '${pageContext.request.contextPath}/metersubmit.action';
+		    var url =  '${pageContext.request.contextPath}/metersubmit.action';
 			var form = $('.meterForm').eq(i);
+		    if(form.find('.write_meter_num').val()==''&& form.find('.write_meter_txt').val()==''){
+				alert('表单不能为空');
+			}
 			$.ajax({
 				url:url,
 				data:form.serialize(),
