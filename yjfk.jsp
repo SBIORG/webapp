@@ -19,7 +19,7 @@
 <script>
 	
     document.domain("xinwubao.com");
-	alert(document.fileImg);
+	alert(window.fileImg);
 </script>
 </head>
 <style>
