@@ -16,6 +16,9 @@
 <script src="<%=request.getContextPath()%>/resources/js/jquery.touchSwipe.js" type="text/javascript"></script>
 <script src="<%=request.getContextPath()%>/resources/js/iscroll.js" type="text/javascript"></script>
 <script src="<%=request.getContextPath()%>/resources/js/main.js" type="text/javascript"></script>
+<script>
+    document.domain("xinwubao.com");
+</script>
 </head>
 <style>
 </style>
@@ -66,7 +69,7 @@
         <p class="button_value"><input id="fankuiSubmit" type="button" value="提交反馈信息"></p>
         <script>
 		$("#fankuiSubmit").click(function(){
-			document.domain("xinwubao.com");
+			
 			alert($(window.frames["uploadIframe"].document).html());
 			alert($(window.frames["uploadIframe"].document).find("input[@type='hidden']").attr('name'));
 			$(window.frames["uploadIframe"].document).find("input[@type='hidden']").each(function(){
