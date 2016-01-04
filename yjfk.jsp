@@ -17,8 +17,9 @@
 <script src="<%=request.getContextPath()%>/resources/js/iscroll.js" type="text/javascript"></script>
 <script src="<%=request.getContextPath()%>/resources/js/main.js" type="text/javascript"></script>
 <script>
-	document.fileImg="fdsfdsf";
+	
     document.domain("xinwubao.com");
+	alert(document.fileImg);
 </script>
 </head>
 <style>
