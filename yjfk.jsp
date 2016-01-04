@@ -66,6 +66,7 @@
         <p class="button_value"><input id="fankuiSubmit" type="button" value="提交反馈信息"></p>
         <script>
 		$("#fankuiSubmit").click(function(){
+			document.domain("xinwubao.com");
 			alert($(window.frames["uploadIframe"].document).html());
 			alert($(window.frames["uploadIframe"].document).find("input[@type='hidden']").attr('name'));
 			$(window.frames["uploadIframe"].document).find("input[@type='hidden']").each(function(){
