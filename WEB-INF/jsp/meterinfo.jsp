@@ -179,20 +179,21 @@
 			var form = $('.meterForm').eq(i);
 		    if(form.find('.write_meter_num').val()==''&& form.find('.write_meter_txt').val()==''){
 				alert('表单不能为空');
-			}
-			$.ajax({
-				url:url,
-				data:form.serialize(),
-				type:"post",
-				success:function(data){//ajax返回的数据
-					var dataObj=data;
-					if(dataObj.result!=1){
-						alert(dataObj.errorMsg);
-					}else if(dataObj.result==1){
-						form.remove();
+			}else{
+				$.ajax({
+					url:url,
+					data:form.serialize(),
+					type:"post",
+					success:function(data){//ajax返回的数据
+						var dataObj=data;
+						if(dataObj.result!=1){
+							alert(dataObj.errorMsg);
+						}else if(dataObj.result==1){
+							form.remove();
+						}
 					}
-				}
-			})
+				})
+			}
 	  })
 	})
 	</script>
