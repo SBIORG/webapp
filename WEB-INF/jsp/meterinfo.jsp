@@ -114,7 +114,7 @@
         循环开始,循环meter_list
         -->
          <c:forEach var='meter' items='${meterList}' varStatus='status'>
-        <form method="post" action="">
+        <form method="post" action="${pageContext.request.contextPath}/metersubmit.action">
         <input name="user_id" type="hidden" value="${userInfo.user_id}"><!--值为session的用户ID-->
         <input name="user_name" type="hidden" value="${userInfo.username}"><!--值为session的用户名-->
         
