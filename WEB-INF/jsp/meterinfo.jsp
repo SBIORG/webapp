@@ -114,7 +114,7 @@
         循环开始,循环meter_list
         -->
          <c:forEach var='meter' items='${meterList}' varStatus='status'>
-        <form method="post" action="${pageContext.request.contextPath}/metersubmit.action">
+        <form class='meterForm' method="post" action="${pageContext.request.contextPath}/metersubmit.action">
         <input name="user_id" type="hidden" value="${userInfo.user_id}"><!--值为session的用户ID-->
         <input name="user_name" type="hidden" value="${userInfo.username}"><!--值为session的用户名-->
         
@@ -130,7 +130,7 @@
             </div>
             <div class="meter_box clearfix">
                <a class="add_meter_txt fl show_textarea">+加备注</a>
-               <input class="save_meter_num fr" type="submit" value="保存">
+               <input class="save_meter_num fr" type="button" value="保存">
             </div>
           </div>
         </div>
@@ -172,6 +172,26 @@
       </ul>
     </div>
     <!--上下层按钮-->
- 
+    <script>
+	$('.save_meter_num').each(function(i){
+	  $(this).bind(touchend,function(){
+			var url =  '${pageContext.request.contextPath}/metersubmit.action';
+			var form = $('.meterForm').eq(i);
+			$.ajax({
+				url:url,
+				data:form.serialize(),
+				type:"post",
+				success:function(data){//ajax返回的数据
+					var dataObj=data;
+					if(dataObj.result!=1){
+						alert(dataObj.errorMsg);
+					}else if(dataObj.result==1){
+						form.remove();
+					}
+				}
+			})
+	  })
+	})
+	</script>
  </body>
 </html>
