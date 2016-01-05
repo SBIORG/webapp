@@ -14,7 +14,7 @@
   <div class="content">
       <!--意见反馈-->
       <div class="feedback_btn">
-        <a href="<%=request.getContextPath()%>/yjfk.ation?url=<%=sbi.xwb.weixin.commons.filemonitor.PropertiesReader.read("server")%>${pageContext.request.contextPath}/exec.action?flowId=${param.flowId}&nodeId=${param.nodeId}&executedId=${param.executedId}"></a>
+        <a href="<%=request.getContextPath()%>/yjfk.action?url=<%=java.net.URLEncoder.encode(sbi.xwb.weixin.commons.filemonitor.PropertiesReader.read("server")+request.getContextPath()+"/lc/exec.action?flowId="+request.getParameter("flowId")+"&nodeId="+request.getParameter("nodeId")+"&executedId="+request.getParameter("executedId"),"UTF-8") %>"></a>
     <!--    <em></em>-->
       </div>
       <!--意见反馈-->

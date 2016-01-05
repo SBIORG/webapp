@@ -29,7 +29,7 @@
   <div class="content">
       <!--意见反馈-->
       <div class="feedback_btn">
-       <a href="<%=request.getContextPath()%>/yjfk.ation?url=<%=sbi.xwb.weixin.commons.filemonitor.PropertiesReader.read("server")%>${pageContext.request.contextPath}/meterinfo.action?lm=cb"></a>
+       <a href="<%=request.getContextPath()%>/yjfk.action?url=<%=java.net.URLEncoder.encode(sbi.xwb.weixin.commons.filemonitor.PropertiesReader.read("server")+request.getContextPath()+"/meterinfo.action?lm=cb","UTF-8") %>"></a>
       </div>
       <!--意见反馈-->
     <!--抄表下拉框以及按钮-->

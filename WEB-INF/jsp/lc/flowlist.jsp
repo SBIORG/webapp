@@ -27,7 +27,7 @@
   <div class="content">
       <!--意见反馈-->
       <div class="feedback_btn">
-        <a href="<%=request.getContextPath()%>/yjfk.ation?url=<%=sbi.xwb.weixin.commons.filemonitor.PropertiesReader.read("server")%>${pageContext.request.contextPath}/list.action?lm=yw"></a>
+        <a href="<%=request.getContextPath()%>/yjfk.action?url=<%=java.net.URLEncoder.encode(sbi.xwb.weixin.commons.filemonitor.PropertiesReader.read("server")+request.getContextPath()+"/lc/list.action?lm=yw","UTF-8") %>"></a>
       </div>
       <!--意见反馈-->
     <!--业务-->
