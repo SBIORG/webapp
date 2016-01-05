@@ -47,7 +47,7 @@
               <textarea class="write_meter_txt write_meter_txt_height" style="display:block;" name="detail" placeholder="详细描述..."></textarea>
             </div>
             <div class="meter_box clearfix">
-               <iframe id="uploadIframe" scrolling="no" src="<%=sbi.xwb.weixin.commons.filemonitor.PropertiesReader.read("domain") %>/weixin/file/index?user_id=1788"></iframe>
+               <iframe id="uploadIframe" scrolling="no" style="width:100%;" src="<%=sbi.xwb.weixin.commons.filemonitor.PropertiesReader.read("domain") %>/weixin/file/index?user_id=1788"></iframe>
             </div>
           </div>
         </div>
@@ -62,7 +62,7 @@
   <div class="bottom_content">
     <!--反馈信息提交按钮-->
       <div class="fixed_button">
-        <p class="button_value"><input id="fankuiSubmit" type="submit" value="提交反馈信息"></p>
+        <p class="button_value"><input id="fankuiSubmit" type="button" value="提交反馈信息"></p>
         <script>
 		var onmessage = function(e) {
        		data = e.data;
@@ -78,10 +78,6 @@
     	} else if (typeof window.attachEvent != 'undefined') {
       		window.attachEvent('onmessage', onmessage);
     	}
-	
-	
-		
-		
 		</script>
       </div>
   	<!--反馈信息提交按钮-->
@@ -89,6 +85,15 @@
   <!--底部栏-->
   <!--content-->
   </form>
-
+  <script>
+    //判断不为空
+	$('#fankuiSubmit').bind(touchend,function(){
+	   if($('.write_meter_num').val()==''){
+		   alert('标题不能为空！');
+	   }else{
+		  $('#fankuiFrom').submit(); 
+	   }
+	})
+  </script>
  </body>
 </html>
