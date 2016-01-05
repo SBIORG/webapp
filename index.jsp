@@ -19,7 +19,7 @@
 <body>
 <div class="content" id="select-house-content">
 	<!--意见反馈-->
-	<div class="feedback_btn"><a href="<%=request.getContextPath()%>/yjfk.jsp?url=<%=sbi.xwb.weixin.commons.filemonitor.PropertiesReader.read("server")%>${pageContext.request.contextPath}/index.jsp?lm=fy"></a></div>
+	<div class="feedback_btn"><a href="<%=request.getContextPath()%>/yjfk.ation?url=<%=sbi.xwb.weixin.commons.filemonitor.PropertiesReader.read("server")%>${pageContext.request.contextPath}/index.jsp?lm=fy"></a></div>
     <!--意见反馈-->
     
     <!--头部导航-->

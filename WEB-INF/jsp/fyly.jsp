@@ -26,7 +26,7 @@
   <div class="content">
         <!--意见反馈-->
       <div class="feedback_btn">
-       <a href="<%=request.getContextPath()%>/yjfk.jsp?url=<%=sbi.xwb.weixin.commons.filemonitor.PropertiesReader.read("server")%>${pageContext.request.contextPath}/msglist.action?houseId=${param.houseId}&houseNO=${param.houseNO}"></a>
+       <a href="<%=request.getContextPath()%>/yjfk.ation?url=<%=sbi.xwb.weixin.commons.filemonitor.PropertiesReader.read("server")%>${pageContext.request.contextPath}/msglist.action?houseId=${param.houseId}&houseNO=${param.houseNO}"></a>
       </div>
       <!--意见反馈-->
 
