@@ -70,7 +70,6 @@
 		var onmessage = function(e) {
        		data = e.data;
 			inputId=$(data).attr('id');
-			alert(inputId);
 			if($("#fankuiFrom").find("#"+inputId)){
 				$("#fankuiFrom").find("#"+inputId).remove();
 			}
