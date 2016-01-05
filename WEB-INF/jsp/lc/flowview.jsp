@@ -35,7 +35,7 @@
   <!--底部栏-->
    <!--意见反馈-->
 	<div class="feedback_btn">
-		<a href="<%=request.getContextPath()%>/yjfk.action?url=<%=java.net.URLEncoder.encode(sbi.xwb.weixin.commons.filemonitor.PropertiesReader.read("server")+request.getContextPath()+"/lc/view.action?flowId="+request.getParameter("flowId"),"UTF-8") %>"></a>
+		<a href="<%=request.getContextPath()%>/yjfk.action?url=<%=java.net.URLEncoder.encode(sbi.xwb.weixin.commons.filemonitor.PropertiesReader.read("server")+request.getContextPath()+"/lc/start.action?flowSign="+request.getParameter("flowSign")+"&lm=yd","UTF-8") %>"></a>
 	</div>
     <!--意见反馈-->
       
