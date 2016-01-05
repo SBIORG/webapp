@@ -69,8 +69,11 @@
         <script>
 		var onmessage = function(e) {
        		data = e.data;
-			inputName=$(data).attr('name');
-			$("#fankuiFrom").find(input[name=inputName]).remove();
+			inputId=$(data).attr('id');
+			alert(inputId);
+			if($("#fankuiFrom").find("#"+inputId)){
+				$("#fankuiFrom").find("#"+inputId).remove();
+			}
 			$("#fankuiFrom").append(data);
     	};
     	//监听postMessage消息事件
