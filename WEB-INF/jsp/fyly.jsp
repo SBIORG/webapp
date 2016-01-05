@@ -26,7 +26,7 @@
   <div class="content">
         <!--意见反馈-->
       <div class="feedback_btn">
-       <a href="<%=request.getContextPath()%>/yjfk.jsp?url=<%=request.getRequestURL()%>"></a>
+       <a href="<%=request.getContextPath()%>/yjfk.jsp?url=<%=sbi.xwb.weixin.commons.filemonitor.PropertiesReader.read("server")+request.getSession().getServletContext().getContextPath()+request.getServletPath()%>"></a>
       </div>
       <!--意见反馈-->
 
