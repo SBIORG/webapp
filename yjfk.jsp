@@ -78,7 +78,7 @@
 			if($("#fankuiFrom").find("#"+inputId)){
 				$("#fankuiFrom").find("#"+inputId).remove();
 			}
-			$("#fankuiFrom").append(data);
+			$("#fankuiFrom").prepend(data);
     	};
     	//监听postMessage消息事件
     	if (typeof window.addEventListener != 'undefined') {
