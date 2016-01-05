@@ -67,8 +67,8 @@
         <p class="button_value"><input id="fankuiSubmit" type="button" value="提交反馈信息"></p>
         <script>
 		var onmessage = function(e) {
-       		var data = e.data;
-       		alert(data);
+       		data = e.data;
+			alert(data);
     	};
     	//监听postMessage消息事件
     	if (typeof window.addEventListener != 'undefined') {
