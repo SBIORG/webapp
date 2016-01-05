@@ -37,7 +37,7 @@
         <!--下拉框-->
         <div class="select_box clearfix">
          <div class="metet_select choose_meter fl">
-           <span>${meterTypes[meterType]}</span>
+           <a href="#"><span>${meterTypes[meterType]}</span></a>
            <!--弹框-->
            <div class="meter_popDiv" style="display:none;">
              <ul>
@@ -53,7 +53,7 @@
          </div>-->
          <div class="metet_select choose_buildings fl">
          <!--链接地址为:URL?meter_type=search_meter_type&build_id=当前的key，search_meter_type为孵化云平台返回的元素-->
-           <span>${buildings[buildId]}</span>栋
+           <a href="#"><span>${buildings[buildId]}</span>栋</a>
            <!--弹框-->
            <div class="meter_popDiv" style="display:none;">
              <div class="bulidings_list" id="building_list">
