@@ -43,7 +43,12 @@
         
         <div class="each_box">
           <div class="clearfix each_info">
-          	
+          	<input type="hidden" name='user_id' value="${userInfo.user_id}"><!--session的用户ID-->
+            <input type="hidden" name='agency_id' value="${userInfo.agency_id}"><!--session的机构ID-->
+            <input type="hidden" name='opname' value="${userInfo.username}"><!--session的用户名-->
+            
+            <input type="hidden" name='agency_name' value="${userInfo.agency_name}"><!--session的机构名称-->
+
             <input type="hidden" name='url' value="${param.url}"> <!--反馈按钮点击带过来的参数-->
             <input type="text" class="write_meter_num" name="title" placeholder="标题：">
             <div>

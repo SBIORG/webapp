@@ -98,8 +98,8 @@
            
               
             <input type="hidden" name='user_id' value="${userInfo.user_id}">
-            <input type="hidden" name='agency_id' value="${userInfo.agency_id }">
-            <input type="hidden" name='agency_name' value="${userInfo.agency_name }">
+            <input type="hidden" name='agency_id' value="${userInfo.agency_id}">
+            <input type="hidden" name='agency_name' value="${userInfo.agency_name}">
             <!-- 需要js获取值 -->
             <input type="hidden" class='hidden_house_id' name='house_ids[]' value='' />
             
