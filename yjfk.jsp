@@ -26,8 +26,6 @@
   <!--content-->
   <div class="content">
       <!--意见反馈-->
-      <div class="feedback_btn">
-        <a></a>
     <!--    <em></em>-->
       </div>
       <!--意见反馈-->
@@ -43,19 +41,13 @@
         
         <div class="each_box">
           <div class="clearfix each_info">
-          	<input type="hidden" name='user_id' value="${userInfo.user_id}"><!--session的用户ID-->
-            <input type="hidden" name='agency_id' value="${userInfo.agency_id}"><!--session的机构ID-->
-            <input type="hidden" name='opname' value="${userInfo.username}"><!--session的用户名-->
-            
-            <input type="hidden" name='agency_name' value="${userInfo.agency_name}"><!--session的机构名称-->
-
             <input type="hidden" name='url' value="${param.url}"> <!--反馈按钮点击带过来的参数-->
             <input type="text" class="write_meter_num" name="title" placeholder="标题：">
             <div>
               <textarea class="write_meter_txt write_meter_txt_height" style="display:block;" name="detail" placeholder="详细描述..."></textarea>
             </div>
             <div class="meter_box clearfix">
-               <iframe id="uploadIframe" scrolling="no" src="http://beta.xinwubao.com/weixin/file/index?user_id=1788"></iframe>
+               <iframe id="uploadIframe" scrolling="no" src="${domain }/weixin/file/index?user_id=1788"></iframe>
             </div>
           </div>
         </div>
