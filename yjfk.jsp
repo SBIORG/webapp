@@ -43,6 +43,7 @@
         
         <div class="each_box">
           <div class="clearfix each_info">
+          	
             <input type="hidden" name='url' value="${param.url}"> <!--反馈按钮点击带过来的参数-->
             <input type="text" class="write_meter_num" name="title" placeholder="标题：">
             <div>
@@ -64,11 +65,13 @@
   <div class="bottom_content">
     <!--反馈信息提交按钮-->
       <div class="fixed_button">
-        <p class="button_value"><input id="fankuiSubmit" type="button" value="提交反馈信息"></p>
+        <p class="button_value"><input id="fankuiSubmit" type="submit" value="提交反馈信息"></p>
         <script>
 		var onmessage = function(e) {
        		data = e.data;
-			alert(data);
+			inputName=$(data).attr('name');
+			$("#fankuiFrom").find(input[name=inputName]).remove();
+			$("#fankuiFrom").append(data);
     	};
     	//监听postMessage消息事件
     	if (typeof window.addEventListener != 'undefined') {
@@ -78,19 +81,7 @@
     	}
 	
 	
-		$("#fankuiSubmit").click(function(){
-			iframe=document.getElementById("uploadIframe");
-			data = iframe.contentWindow.name;
-			alert(data);
-			alert($(window.frames["uploadIframe"].document).html());
-			alert($(window.frames["uploadIframe"].document).find("input[@type='hidden']").attr('name'));
-			$(window.frames["uploadIframe"].document).find("input[@type='hidden']").each(function(){
-				alert($(this).val())
-			});
-			
-			//$("#fankuiFrom").append(html);
-			//return false;
-		});
+		
 		
 		</script>
       </div>
