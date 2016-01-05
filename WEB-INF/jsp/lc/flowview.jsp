@@ -33,11 +33,11 @@
    
   </div>
   <!--底部栏-->
-  <!--反馈及返回按钮-->
-    <div class="message_goback">
-      <a href="${param.url}"> < <span>意见反馈</span></a>
-    </div>
-    <!--反馈及返回按钮-->
+   <!--意见反馈-->
+	<div class="feedback_btn"><a href="<%=request.getContextPath()%>/yjfk.jsp?url=<%=sbi.xwb.weixin.commons.filemonitor.PropertiesReader.read("server")+request.getSession().getServletContext().getContextPath()+request.getServletPath()%>"></a></div>
+    <!--意见反馈-->
+      
+  
     
   
     <!--审批按钮-->
