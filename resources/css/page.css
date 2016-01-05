@@ -237,7 +237,7 @@
 	.write_meter_txt_height{
 		height:55.5px;
 	}
-	.save_meter_num{
+	.save_meter_num, .fileBtn{
 		font-size:12px;
 		padding:6px 20px;
 	}
@@ -319,7 +319,7 @@
 	.write_meter_txt_height{
 		height:75px;
 	}
-	.save_meter_num{
+	.save_meter_num, .fileBtn{
 		font-size:16px;
 		padding:8px 27px;
 	}
@@ -399,7 +399,7 @@
 	.write_meter_txt_height{
 		height:93px;
 	}
-	.save_meter_num{
+	.save_meter_num, .fileBtn{
 		font-size:18px;
 		padding:10px 33px;
 	}
@@ -469,7 +469,7 @@
 		font-size:16px;
 		padding:16px 20px;
 	}
-	.save_meter_num{
+	.save_meter_num, .fileBtn{
 		font-size:20px;
 		padding:12px 40px;
 	}
