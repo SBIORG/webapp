@@ -47,7 +47,7 @@
               <textarea class="write_meter_txt write_meter_txt_height" style="display:block;" name="detail" placeholder="详细描述..."></textarea>
             </div>
             <div class="meter_box clearfix">
-               <iframe id="uploadIframe" scrolling="no" style="width:100%;" src="<%=sbi.xwb.weixin.commons.filemonitor.PropertiesReader.read("domain") %>/weixin/file/index?filetoken=&user_id=${userInfo.user_id}"></iframe>
+               <iframe id="uploadIframe" scrolling="no" style="width:100%;" src="<%=sbi.xwb.weixin.commons.filemonitor.PropertiesReader.read("domain") %>/weixin/file/index?filetoken="></iframe>
             </div>
           </div>
         </div>
