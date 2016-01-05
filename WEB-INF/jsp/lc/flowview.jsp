@@ -38,6 +38,8 @@
 		<a href="<%=request.getContextPath()%>/yjfk.action?url=<%=java.net.URLEncoder.encode(sbi.xwb.weixin.commons.filemonitor.PropertiesReader.read("server")+request.getContextPath()+"/lc/view.action?flowId="+request.getParameter("flowId"),"UTF-8") %>"></a>
 	</div>
     <!--意见反馈-->
+      
+  
     
   
     <!--审批按钮-->
