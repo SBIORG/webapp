@@ -27,7 +27,7 @@
   <div class="content">
       <!--意见反馈-->
       <div class="feedback_btn">
-        <a href="<%=request.getContextPath()%>/yjfk.jsp?url=<%=request.getRequestURL()%>"></a>
+        <a href="<%=request.getContextPath()%>/yjfk.jsp?url=<%=request.getHeader("Referer")%>"></a>
       </div>
       <!--意见反馈-->
     <!--业务-->
