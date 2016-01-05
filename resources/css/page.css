@@ -132,6 +132,7 @@
 	left:0;
 	width:100%;
 }
+.meter_popDiv ul li a{color:#fff!important;}
 .meter_popDiv ul li{
 	text-align:center;
 	color:#fff;
