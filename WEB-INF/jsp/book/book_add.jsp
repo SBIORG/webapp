@@ -193,11 +193,11 @@
 								$('.hidden_house_id').remove();
 							}
 						});
-					  var hidden_html=select_house_numbers.join(",");
-					  var house_no_html='';
+					  var hidden_html='';
+					  var house_no_html=select_house_numbers.join(",");
 					   $.each(select_house_ids,function(i){
 						  
-						  hidden_html+='<input type="hidden" class="hidden_house_id" name="house_ids[]" value="'+select_house_lis[i]+'" />';
+						  hidden_html+='<input type="hidden" class="hidden_house_id" name="house_ids[]" value="'+select_house_ids[i]+'" />';
 					 });
 					  
 					 
