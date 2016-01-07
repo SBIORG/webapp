@@ -35,6 +35,9 @@
         <div id="scroller">
           <!---->
           <div class="inner_content" id="thelist">
+          <c:choose>
+         <c:when test="${fn:length(flowBusPojos)!=0 }">
+        
             <!--每一条业务信息-->
             <c:forEach items="${flowBusPojos}" var="bus" varStatus="status">
             <a class="all_link" href="${pageContext.request.contextPath}/lc/view.action?flowId=${bus.flow_id}">
@@ -47,6 +50,18 @@
                 </div>
             </a>
             </c:forEach>
+            </c:when>
+        	<c:otherwise>
+        	 <div class="success">
+         	<img src="<%=request.getContextPath()%>/resources/images/error.png">
+         	<p>暂无审批数据</p>
+      		</div>
+       		</c:otherwise>
+        	</c:choose>
+           
+      
+      
+            
           </div>
           <!---->
           <div id="pullUp">
@@ -61,6 +76,7 @@
   <!--content-->
   <script>
   	$(function(){
+			
 		if($("#thelist a").length<30)
 		{
 			$("#pullUp").hide();	
