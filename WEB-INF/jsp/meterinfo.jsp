@@ -102,6 +102,13 @@
            -->
           </ul>
         </div>
+        <script>
+		  $('#building_list a').each(function(){
+			  $(this).bind(touchend,function(){
+				  window.location.href = $(this).attr('href');
+			  })
+		  })
+		</script>
         <!--上下层按钮-->
     </div>
     <!--抄表下拉框以及按钮-->
