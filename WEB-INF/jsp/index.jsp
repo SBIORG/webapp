@@ -131,6 +131,8 @@ $(function(){
 	if($("#buildlistbox li").length>0)
 	{
 		build_id=$("#buildlistbox li").eq(0).attr("data-id");
+		$("#buildlistbox li").eq(0).find("a").addClass("actived");
+		actived
 		getHouseList(build_id);
 	}else{
 		$("#select-house-content").hide();
@@ -138,7 +140,28 @@ $(function(){
 		$("#errorContent").show();
 	}
 	
-	
+	$("#buildlistbox li").bind(touchend,function(){
+		$("#buildlistbox a").removeClass("actived");
+		$(this).find('a').addClass("actived");
+		$('.fixed_button').hide();
+		getHouseList($(this).attr("data-id")); 
+	});
+	$("#buildlistbox1 li").bind(touchend,function(){
+		var li_length=0;
+		var i = $(this).index();
+		$("#buildlistbox a").removeClass("actived");
+		$("#buildlistbox li").eq(i).find('a').addClass("actived");
+		$('.fixed_button').hide();
+		getHouseList($(this).attr("data-id")); 
+		$('.slide_btn').removeClass('click');
+		$('.popDiv').hide();
+		for(var j=0; j<i; j++)
+		{
+			li_length += parseFloat($("#buildlistbox li").eq(j).width())+parseFloat($(this).css('marginRight'));
+		}
+		 myScroll_h.scrollTo(-(li_length), 0, 200);
+		 li_length=0;
+	});
 	
 });
 </script>
