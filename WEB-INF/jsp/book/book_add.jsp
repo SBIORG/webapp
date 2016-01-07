@@ -169,6 +169,7 @@
 				$('.floor_info ol li').css('margin-bottom',(li_padding-10)+'px');
 				//选择房屋fixed_button
 			    $('.fyyd ol li').unbind(touchstart).bind(touchstart,choose_house);
+				//遍历避免重复
 				//选定房屋号
 				$('#choose_house').bind(touchstart,function(){
 					$('.hidden_house_id').each(function(){
@@ -181,8 +182,10 @@
 					  $('.floor_info').find('.choose').each(function(){
 						 // alert($(this).attr("data-housenumber")+ " ");
 						  house_no_html+=$(this).attr("data-housenumber")+ " ";
+						  alert($(this).attr("data-id"));
 						  hidden_html+='<input type="hidden" class="hidden_house_id" name="house_ids[]" value="'+$(this).attr("data-id")+'" />';
 					  });
+					  alert(hidden_html);
 					  $("#showhouseno").html(house_no_html);
 					  $("#book_submit_box form").append(hidden_html);
 				  })
@@ -263,7 +266,7 @@ function getBuildInfo(){
 					$("#buildlistbox a").removeClass("actived");
 					$(this).find('a').addClass("actived");
 					$('.fixed_button').hide();
-					getHouseList($(this).attr("data-id")); 
+					getHouseList($(this).attr("data-id"));
 				});
 				$("#buildlistbox1 li").bind(touchend,function(){
 					var li_length=0;
