@@ -50,7 +50,7 @@
           </div>
           <!---->
           <div id="pullUp">
-             <span class="pullUpIcon"></span><span class="pullUpLabel">Pull up to refresh...</span>
+             <span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多....</span>
           </div>
         </div>
     </div>
@@ -60,6 +60,12 @@
 
   <!--content-->
   <script>
+  	$(function(){
+		if($("#thelist").html()=='')
+		{
+			$("#pullUp").hide();	
+		}
+	});
 	var myScroll,pullDownEl, pullDownOffset,pullUpEl, pullUpOffset;//generatedCount = 0;
 
 //function pullDownAction () {  //下拉获取最新内容
