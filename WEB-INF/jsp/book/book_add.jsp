@@ -115,8 +115,10 @@
       </form>
     </div>
   </div>
-   <script>
-    var myScroll_h;
+<script>
+	var myScroll_h;
+	var select_house_ids = [];
+	var select_house_lis = [];
 	function loaded() {
 		setTimeout(function () {
             myScroll_h =new iScroll("slider_box",{hScrollbar:false, vScrollbar:false, bounce:false}); 
@@ -146,10 +148,17 @@
 					houseHtml += '<div class="floor_info fyyd"><ol class="clearfix">';
 					houselistdata = eval(listdata[index]);
 					$.each(houselistdata, function(key){
+						this_li_id = "house-'+houselistdata[key].house_id+'";
+						id_key=select_house_ids.indexOf(this_li_id);
+						select_style = '';
+						if(id_key){
+							select_style='choose';
+						}
+						
 						if(houselistdata[key].lease_status==0){
-							houseHtml += '<li class="normal" data-housenumber="'+houselistdata[key].house_number+'" data-id="'+houselistdata[key].house_id+'">';
+							houseHtml += '<li id="house-'+houselistdata[key].house_id+'" class="normal '+select_style+'" data-housenumber="'+houselistdata[key].house_number+'" data-id="'+houselistdata[key].house_id+'">';
 						}else{
-							houseHtml += '<li class="disable" data-housenumber="'+houselistdata[key].house_number+'" data-id="'+houselistdata[key].house_id+'">';
+							houseHtml += '<li id="house-'+houselistdata[key].house_id+'" class="disable '+select_style+'" data-housenumber="'+houselistdata[key].house_number+'" data-id="'+houselistdata[key].house_id+'">';
 						}
 						houseHtml += '<h2>'+houselistdata[key].house_number+'</h2><span>'+houselistdata[key].lease_area+'平</span><em></em></li>';
 					});
@@ -176,10 +185,10 @@
 				//  })
 				  $('#choose_house').bind(touchend,function(){
 					  $('.hidden_house_id').each(function(){
-						if($(this).val()==''){
-							$('.hidden_house_id').remove();
-						}
-					});
+					  		if($(this).val()==''){
+								$('.hidden_house_id').remove();
+							}
+						});
 					  var hidden_html='';
 					  var house_no_html='';
 					  $('.floor_info').find('.choose').each(function(){
@@ -208,10 +217,17 @@ function choose_house(){
 		$(this).addClass('choose');
 		$(this).find('em').show();
 		$('.fixed_button').show();
+		select_house_ids.push($(this).attr("data-id"));
+		select_house_lis.push("house-"+$(this).attr("data-id"));
 	}
-	else if($(this).hasClass('choose')){
+	else if($(this).hasClass('choose'))
+	{
 		$(this).removeClass('choose').addClass('normal');
 		$(this).find('em').hide();
+		
+		id_key=select_house_ids.indexOf();
+		select_house_ids.slice(id_key,1);
+		select_house_lis.slice(id_key,1);	
 	}
 	length=$('.choose').length;
 	num+=length;
