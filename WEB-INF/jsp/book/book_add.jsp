@@ -148,7 +148,7 @@
 					houseHtml += '<div class="floor_info fyyd"><ol class="clearfix">';
 					houselistdata = eval(listdata[index]);
 					$.each(houselistdata, function(key){
-						this_li_id = "house-'+houselistdata[key].house_id+'";
+						this_li_id = "house-"+houselistdata[key].house_id;
 						id_key=select_house_ids.indexOf(this_li_id);
 						select_style = 'choose';
 						if(id_key<0){
