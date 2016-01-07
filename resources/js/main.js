@@ -153,6 +153,9 @@ function hideButton(){
 	if($(".fyyd ol li").hasClass('choose')){
 		$(".fyyd ol li").removeClass('choose').addClass('normal');
 	}
+	if($(".fyyd ol li").hasClass('disable')){
+		$(".fyyd ol li").removeClass('normal').addClass('disable');
+	}
 	$(".fyyd ol li").find('em').hide();
 }
 

@@ -21,7 +21,7 @@ if(lm!=null){
       <div class="bottom_nav"><!--导航选中效果加class：nav_actived-->
          <ul>
            <li class="fangyuan <c:if test="${lm=='fy'}">nav_actived</c:if>">
-             <a href='${pageContext.request.contextPath}/index.jsp?lm=fy'>
+             <a href='${pageContext.request.contextPath}/index.action?lm=fy'>
               <i></i>
               <p>房源</p>
              </a>

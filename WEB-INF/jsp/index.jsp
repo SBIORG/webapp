@@ -42,7 +42,9 @@
         
         	<ul class="clearfix buildlistbox" id="buildlistbox" style="width:2000px;">
             	<!--大楼循环开始-->
-            	<li data-id="<!--输出id-->"><a href="#"><!-- 输出building_number--></a></li>
+            	<c:forEach var='building' items='${buildings}' varStatus='status'>
+            		<li data-id="${building.id }"><a href="${building.building_number }"><!-- 输出building_number--></a></li>
+            	</c:forEach>
                 <!--大楼循环结束-->
             </ul>
         
