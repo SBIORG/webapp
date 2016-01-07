@@ -230,6 +230,7 @@ function choose_house(){
 		$(this).find('em').hide();
 		
 		id_key=select_house_ids.indexOf();
+		alert(id_key);
 		if(id_key>=0){
 			select_house_ids.slice(id_key,1);
 			select_house_lis.slice(id_key,1);	
