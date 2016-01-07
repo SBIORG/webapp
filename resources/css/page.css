@@ -224,7 +224,7 @@
 	.metet_select{
 		background-size:10px auto;
 	}
-	.metet_select a, .metet_select span, .word_zhi{
+	.metet_select a, .metet_select span, .word_zhi, .metet_select p{
 		font-size:12px;
 	}
 	.metet_select input[type="text"]{
@@ -306,7 +306,7 @@
 	.metet_select{
 		background-size:12px auto;
 	}
-	.metet_select a, .metet_select span, .word_zhi{
+	.metet_select a, .metet_select span, .word_zhi, .metet_select p{
 		font-size:15px;
 	}
 	.metet_select input[type="text"]{
@@ -386,7 +386,7 @@
 	.metet_select{
 		background-size:14px auto;
 	}
-	.metet_select a, .meter_select span, .word_zhi{
+	.metet_select a, .meter_select span, .word_zhi, .metet_select p{
 		font-size:18px;
 	}
 	.metet_select input[type="text"]{
@@ -462,7 +462,7 @@
 	.metet_select{
 		
 	}
-	.metet_select a, .meter_select span, .word_zhi{
+	.metet_select a, .meter_select span, .word_zhi, .metet_select p{
 		font-size:24px;
 	}
 	.metet_select input[type="text"]{

@@ -88,8 +88,8 @@ $(function(){
 	//$('.bottom_nav ul li').unbind(touchend).bind(touchend, bottomNavTabup);
 	
 	//选择表以及栋数 
-	$('.choose_meter').unbind(touchend).bind(touchend, meterChoose);
-	$('.choose_buildings').unbind(touchend).bind(touchend, meterChoose);
+	$('.choose_meter p').unbind(touchend).bind(touchend, meterChoose);
+	$('.choose_buildings p').unbind(touchend).bind(touchend, meterChoose);
 	//$('.choose_meter ul li').unbind(touchend).bind(touchend, getMeterText);
 	$('.choose_buildings ul li').unbind(touchend).bind(touchend, getBuildingText);
 	
