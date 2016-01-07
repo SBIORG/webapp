@@ -57,38 +57,7 @@
              </table>
           </div>
         </div>
-                <!--审批业务-->
- 		<div class="each_box">
-          <h1 class="each_h1">车位退租情况</h1>
-          <div class="clearfix each_info">
-             <table>
-               <tr>
-                 <td class="info_title">【退租车位】</td>
-                 <td class="info_words"><i class="c669">${map['cont_info'].all_parking}</i></td>
-               </tr>
-               <tr>
-                 <td class="info_title">【租赁期限】</td>
-                 <td class="info_words">${map['cont_info'].lease_date}</td>
-               </tr>
-               <tr>
-                 <td class="info_title">【退租时间】</td>
-                 <td class="info_words">${map['cont_info'].throw_time}</td>
-               </tr>
-                              <tr>
-                 <td class="info_title">【租赁退费】</td>
-                 <td class="info_words">${map['cont_info'].throw_fee}</td>
-               </tr>
-                                             <tr>
-                 <td class="info_title">【押金】</td>
-                 <td class="info_words">${map['cont_info'].deposit}</td>
-               </tr>
-                                             <tr>
-                 <td class="info_title">【${map['cont_info'].fee_name}】</td>
-                 <td class="info_words">${map['cont_info'].fee_value}</td>
-               </tr>
-             </table>
-          </div>
-        </div>
+                
 
       </div>
     </div>
