@@ -119,6 +119,7 @@
 	var myScroll_h;
 	var select_house_ids = [];
 	var select_house_lis = [];
+	var select_house_numbers=[];
 	function loaded() {
 		setTimeout(function () {
             myScroll_h =new iScroll("slider_box",{hScrollbar:false, vScrollbar:false, bounce:false}); 
@@ -192,18 +193,14 @@
 								$('.hidden_house_id').remove();
 							}
 						});
-					  var hidden_html='';
+					  var hidden_html=select_house_numbers.join(",");
 					  var house_no_html='';
-					  $.each(select_house_lis,function(i){
-						  house_no_html+= $("#"+select_house_lis[i]).attr("data-housenumber");
-						  hidden_html+='<input type="hidden" class="hidden_house_id" name="house_ids[]" value="'+$("#"+select_house_lis[i]).attr("data-id")+'" />';
+					   $.each(select_house_ids,function(i){
+						  
+						  hidden_html+='<input type="hidden" class="hidden_house_id" name="house_ids[]" value="'+select_house_lis[i]+'" />';
 					 });
 					  
-					 /* $('.floor_info').find('.choose').each(function(){
-						 // alert($(this).attr("data-housenumber")+ " ");
-						  house_no_html+=$(this).attr("data-housenumber")+ " ";
-						  hidden_html+='<input type="hidden" class="hidden_house_id" name="house_ids[]" value="'+$(this).attr("data-id")+'" />';
-					  });*/
+					 
 					  $("#showhouseno").html(house_no_html);
 					  $(".hidden_house_id").remove();
 					  $("#book_submit_box form").append(hidden_html);
@@ -228,6 +225,7 @@ function choose_house(){
 		$(this).removeClass('normal').addClass('choose');
 		$(this).find('em').show();
 		$('.fixed_button').show();
+		select_house_numbers.push($(this).attr("data-housenumber"));
 		select_house_ids.push($(this).attr("data-id"));
 		select_house_lis.push("house-"+$(this).attr("data-id"));
 		
@@ -241,7 +239,8 @@ function choose_house(){
 		
 		if(id_key>=0){
 			select_house_ids.splice(id_key,1);
-			select_house_lis.splice(id_key,1);	
+			select_house_lis.splice(id_key,1);
+			select_house_numbers.splice(id_key,1);	
 		}
 		
 			
