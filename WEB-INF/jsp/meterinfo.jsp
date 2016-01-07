@@ -59,7 +59,7 @@
              <div class="bulidings_list" id="building_list">
                  <ul>
                  <c:forEach var="building" items="${buildings}"> 
-                   <a href="${pageContext.request.contextPath}/meterinfo.action?bid=${ building.key}&meterType=${map['search_meter_type']}"><li> <span>${building.value }</span></li></a>
+                   <a href="${pageContext.request.contextPath}/meterinfo.action?bid=${building.key}&meterType=${map['search_meter_type']}"><li> <span>${building.value }</span></li></a>
                 </c:forEach>
                  </ul>
              </div>
