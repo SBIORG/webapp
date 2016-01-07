@@ -131,7 +131,7 @@ $(function(){
 	if($("#buildlistbox li").length>0)
 	{
 		build_id=$("#buildlistbox li").eq(0).attr("data-id");
-		$("#buildlistbox li").eq(0).find("a").addClass("actived");
+		$("#buildlistbox a").eq(0).addClass("actived");
 		getHouseList(build_id);
 	}else{
 		$("#select-house-content").hide();
