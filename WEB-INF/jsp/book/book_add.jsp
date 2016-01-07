@@ -245,9 +245,8 @@ function choose_house(){
 		
 			
 	}
-	length=$('.choose').length;
-	num+=length;
-	$('.button_value i').text(num);
+	
+	$('.button_value i').text(select_house_ids.length);
 }
 function getBuildInfo(){
 	 
@@ -296,7 +295,7 @@ function getBuildInfo(){
 				$("#buildlistbox li").bind(touchend,function(){
 					$("#buildlistbox a").removeClass("actived");
 					$(this).find('a').addClass("actived");
-					$('.fixed_button').hide();
+					//$('.fixed_button').hide();
 					getHouseList($(this).attr("data-id"));
 				});
 				$("#buildlistbox1 li").bind(touchend,function(){
@@ -304,7 +303,7 @@ function getBuildInfo(){
 					var i = $(this).index();
 					$("#buildlistbox a").removeClass("actived");
 				    $("#buildlistbox li").eq(i).find('a').addClass("actived");
-					$('.fixed_button').hide();
+					//$('.fixed_button').hide();
 					getHouseList($(this).attr("data-id")); 
 					$('.slide_btn').removeClass('click');
 					$('.popDiv').hide();
