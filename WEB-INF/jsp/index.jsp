@@ -130,6 +130,7 @@ $(function(){
 	if($("#buildlistbox li").length>0)
 	{
 		build_id=$("#buildlistbox li").eq(0).attr("data-id");
+		alert(build_id);
 		getHouseList(build_id);
 	}else{
 		$("#select-house-content").hide();
