@@ -16,10 +16,10 @@
 <script src="<%=request.getContextPath()%>/resources/js/jquery.touchSwipe.js" type="text/javascript"></script>
 <script src="<%=request.getContextPath()%>/resources/js/iscroll.js" type="text/javascript"></script>
 <script src="<%=request.getContextPath()%>/resources/js/main.js" type="text/javascript"></script>
-</head>
-<style type="text/css"  media="screen,projection">
-  html{background:#478ede;}
+<style>
+  html,body{background:#478ede;}
 </style>
+</head>
 <body>
   <!--content-->
   <div class="content">
