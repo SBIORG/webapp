@@ -46,11 +46,11 @@
                </tr>
                <tr>
                  <td class="info_title">【缴纳订金】</td>
-                 <td class="info_words">${${map['bookrefund_info'].book_fee}}</td>
+                 <td class="info_words">${map['bookrefund_info'].book_fee}</td>
                </tr>
                <tr>
                  <td class="info_title">【备注】</td>
-                 <td class="info_words">${${map['bookrefund_info'].remark}}</td>
+                 <td class="info_words">${map['bookrefund_info'].remark}</td>
                </tr>
              </table>
           </div>
