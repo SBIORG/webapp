@@ -31,13 +31,14 @@
          <div class="input_box">
             <div class="input_style count">
               <label>账号：</label>
-              <input type="text" class="input" name="username" >
+              <input type="text" class="input" name="username" />
               <em class=""></em>
             </div>
             <div class="input_style password">
               <label>密码：</label>
-              <input type="password" class="input" id="password" name="password">
-              <em class=""> <input type="input" class="input" name="openid" value="${param.openid}" ></em>
+              <input type="password" class="input" id="password" name="password" />
+              <input type="input" class="input" name="openid" value="${param.openid}" />
+              <em class=""> </em>
             </div>
          </div>
          <input type="submit" class="login_submit" value="登录">
