@@ -150,10 +150,9 @@
 					$.each(houselistdata, function(key){
 						this_li_id = "house-'+houselistdata[key].house_id+'";
 						id_key=select_house_ids.indexOf(this_li_id);
-						alert(id_key);
-						select_style = '';
-						if(id_key){
-							select_style='choose';
+						select_style = 'choose';
+						if(id_key<0){
+							select_style='';
 						}
 						
 						if(houselistdata[key].lease_status==0){
@@ -227,8 +226,11 @@ function choose_house(){
 		$(this).find('em').hide();
 		
 		id_key=select_house_ids.indexOf();
-		select_house_ids.slice(id_key,1);
-		select_house_lis.slice(id_key,1);	
+		if(id_key>=0){
+			select_house_ids.slice(id_key,1);
+			select_house_lis.slice(id_key,1);	
+		}
+			
 	}
 	length=$('.choose').length;
 	num+=length;
