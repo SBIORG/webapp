@@ -61,10 +61,9 @@
   <!--content-->
   <script>
   	$(function(){
-		$("#pullUp").hide();	
-		if($("#thelist").html()!='')
+		if($("#thelist a").length<30)
 		{
-			$("#pullUp").show();	
+			$("#pullUp").hide();	
 		}
 	});
 	var myScroll,pullDownEl, pullDownOffset,pullUpEl, pullUpOffset;//generatedCount = 0;
