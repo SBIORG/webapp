@@ -42,7 +42,7 @@
            <div class="meter_popDiv" style="display:none;">
              <ul>
              <c:forEach var="meter" items="${meterTypes}"> 
-               <li><a href="${pageContext.request.contextPath}/meterinfo.action?meterType=${meter.key}&bid=${map['search_build_id']}"><span>${meter.value}</span></a></li>
+               <a href="${pageContext.request.contextPath}/meterinfo.action?meterType=${meter.key}&bid=${map['search_build_id']}"><li><span>${meter.value}</span></li></a>
              </c:forEach>
              </ul>
            </div>
@@ -59,7 +59,7 @@
              <div class="bulidings_list" id="building_list">
                  <ul>
                  <c:forEach var="building" items="${buildings}"> 
-                   <li> <a href="${pageContext.request.contextPath}/meterinfo.action?bid=${ building.key}&meterType=${map['search_meter_type']}"><span>${building.value }</span></a></li>
+                   <a href="${pageContext.request.contextPath}/meterinfo.action?bid=${ building.key}&meterType=${map['search_meter_type']}"><li> <span>${building.value }</span></li></a>
                 </c:forEach>
                  </ul>
              </div>
