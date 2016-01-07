@@ -130,23 +130,7 @@ function showPassword(){
 	}
 }
 
-function choose_house(){
-	alert("fsdfds");
-	var length=0;
-	var num=0;
-	if($(this).hasClass('normal')){
-		$(this).addClass('choose').removeClass('normal');
-		$(this).find('em').show();
-		$('.fixed_button').show();
-	}
-	else if($(this).hasClass('choose')){
-		$(this).removeClass('choose').addClass('normal');
-		$(this).find('em').hide();
-	}
-	length=$('.choose').length;
-	num+=length;
-	$('.button_value i').text(num);
-}
+
 
 function hideButton(){
 	$('.fixed_button').hide();
