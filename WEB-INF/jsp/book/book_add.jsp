@@ -194,13 +194,21 @@
 						});
 					  var hidden_html='';
 					  var house_no_html='';
-					  $('.floor_info').find('.choose').each(function(){
+					  $.each(select_house_lis,function(i){
+						  house_no_html+= $("#"+select_house_lis[i]).attr("data-housenumber");
+						  hidden_html+='<input type="hidden" class="hidden_house_id" name="house_ids[]" value="'+$("#"+select_house_lis[i]).attr("data-id")+'" />';
+					 });
+					  
+					 /* $('.floor_info').find('.choose').each(function(){
 						 // alert($(this).attr("data-housenumber")+ " ");
 						  house_no_html+=$(this).attr("data-housenumber")+ " ";
 						  hidden_html+='<input type="hidden" class="hidden_house_id" name="house_ids[]" value="'+$(this).attr("data-id")+'" />';
-					  });
+					  });*/
 					  $("#showhouseno").html(house_no_html);
+					  $(".hidden_house_id").remove();
 					  $("#book_submit_box form").append(hidden_html);
+					  
+					  
 					  $('#select-house-content').hide();
 					  $('#page-footer').hide();
 					  $('.bottom_nav').hide();
