@@ -134,9 +134,11 @@ function showPassword(){
 
 function hideButton(){
 	$('.fixed_button').hide();
-	if($(".fyyd ol li").hasClass('choose')){
-		$(".fyyd ol li").removeClass('choose');
-	}
+	$(".fyyd ol li").each(function(){
+		if($(this).hasClass('choose')){
+		   $(this).removeClass('choose').addClass('normal');
+	    }
+	})
 	$(".fyyd ol li").find('em').hide();
 }
 
