@@ -37,7 +37,7 @@
             <div class="input_style password">
               <label>密码：</label>
               <input type="password" class="input" id="password" name="password" />
-              <input type="input" class="input" name="openid" value="${param.openid}" />
+              <input type="hidden" class="input" name="openid" value="${param.openid}" />
               <em class=""> </em>
             </div>
          </div>
