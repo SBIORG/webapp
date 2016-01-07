@@ -103,12 +103,14 @@
           </ul>
         </div>
         <script>
-		  $('#building_list a').each(function(){
-			  $(this).bind(touchend,function(){
+		  $(function(){
+			  $('#building_list a').bind(touchend,function(){
 				  alert('fff');
 				  window.location.href = $(this).attr('data-href');
 			  })
-		  })
+			 });
+			  
+		 
 		</script>
         <!--上下层按钮-->
     </div>
