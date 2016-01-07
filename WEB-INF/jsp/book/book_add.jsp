@@ -152,8 +152,10 @@
 						this_li_id = "house-"+houselistdata[key].house_id;
 						id_key=select_house_lis.indexOf(this_li_id);
 						select_style = 'choose';
+						em_style=' style="display: inline;"';
 						if(id_key<0){
 							select_style='';
+							em_style='';
 						}
 						
 						if(houselistdata[key].lease_status==0){
@@ -161,7 +163,7 @@
 						}else{
 							houseHtml += '<li id="house-'+houselistdata[key].house_id+'" class="disable '+select_style+'" data-housenumber="'+houselistdata[key].house_number+'" data-id="'+houselistdata[key].house_id+'">';
 						}
-						houseHtml += '<h2>'+houselistdata[key].house_number+'</h2><span>'+houselistdata[key].lease_area+'平</span><em></em></li>';
+						houseHtml += '<h2>'+houselistdata[key].house_number+'</h2><span>'+houselistdata[key].lease_area+'平</span><em '+em_style+'></em></li>';
 					});
 					houseHtml += '</ol></div>';
 				});
