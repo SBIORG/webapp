@@ -147,11 +147,10 @@
 				$.each(listdata, function(index){
 					houseHtml += '<div class="floor_info fyyd"><ol class="clearfix">';
 					houselistdata = eval(listdata[index]);
-					console.log(select_house_ids);
-					console.log(select_house_lis);
+					
 					$.each(houselistdata, function(key){
 						this_li_id = "house-"+houselistdata[key].house_id;
-						id_key=select_house_ids.indexOf(this_li_id);
+						id_key=select_house_lis.indexOf(this_li_id);
 						select_style = 'choose';
 						if(id_key<0){
 							select_style='';
@@ -221,8 +220,7 @@ function choose_house(){
 		$('.fixed_button').show();
 		select_house_ids.push($(this).attr("data-id"));
 		select_house_lis.push("house-"+$(this).attr("data-id"));
-		console.log(select_house_ids);
-		console.log(select_house_lis);
+		
 	}
 	else if($(this).hasClass('choose'))
 	{
@@ -230,13 +228,12 @@ function choose_house(){
 		$(this).find('em').hide();
 		
 		id_key=select_house_ids.indexOf($(this).attr("data-id"));
-		alert(id_key);
+		
 		if(id_key>=0){
 			select_house_ids.splice(id_key,1);
 			select_house_lis.splice(id_key,1);	
 		}
-		console.log(select_house_ids);
-		console.log(select_house_lis);
+		
 			
 	}
 	length=$('.choose').length;
