@@ -204,7 +204,7 @@ function choose_house(){
 	var length=0;
 	var num=0;
 	if($(this).hasClass('normal')){
-		$(this).addClass('choose').removeClass('normal');
+		$(this).addClass('choose');
 		$(this).find('em').show();
 		$('.fixed_button').show();
 	}

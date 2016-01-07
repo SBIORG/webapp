@@ -151,7 +151,7 @@ function choose_house(){
 function hideButton(){
 	$('.fixed_button').hide();
 	if($(".fyyd ol li").hasClass('choose')){
-		$(".fyyd ol li").removeClass('choose').addClass('normal');
+		$(".fyyd ol li").removeClass('choose');
 	}
 	$(".fyyd ol li").find('em').hide();
 }
