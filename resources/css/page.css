@@ -138,6 +138,7 @@
 	position:absolute;
 	left:0;
 	width:100%;
+	z-index:100;
 }
 .meter_popDiv ul li a{color:#fff!important;}
 .meter_popDiv ul li{

@@ -37,7 +37,7 @@
         <!--下拉框-->
         <div class="select_box clearfix">
          <div class="metet_select choose_meter fl">
-           <p><span>${meterTypes[meterType]}</span></p>
+           <a href="#"><span>${meterTypes[meterType]}</span></a>
            <!--弹框-->
            <div class="meter_popDiv" style="display:none;">
              <ul>
@@ -53,7 +53,7 @@
          </div>-->
          <div class="metet_select choose_buildings fl">
          <!--链接地址为:URL?meter_type=search_meter_type&build_id=当前的key，search_meter_type为孵化云平台返回的元素-->
-           <p><span>${buildings[buildId]}</span>栋</p>
+           <a href="#"><span>${buildings[buildId]}</span>栋</a>
            <!--弹框-->
            <div class="meter_popDiv" style="display:none;">
              <div class="bulidings_list" id="building_list">
@@ -102,6 +102,13 @@
            -->
           </ul>
         </div>
+        <script>
+		  $('#building_list a').each(function(){
+			  $(this).bind(touchend,function(){
+				  window.location.href = $(this).attr('href');
+			  })
+		  })
+		</script>
         <!--上下层按钮-->
     </div>
     <!--抄表下拉框以及按钮-->
