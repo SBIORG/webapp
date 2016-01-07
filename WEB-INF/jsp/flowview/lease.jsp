@@ -46,30 +46,28 @@
                  <td class="info_title">【预订订金】</td>
                  <td class="info_words">${map['cont'].true_book_fee}元</td>
                </tr>
-               <c:if test="${map['cont'].free_date!="" }">
+               
                <tr>
                  <td class="info_title">【免租日期】</td>
                  <td class="info_words">${map['cont'].free_date}</td>
                </tr>
-               </c:if>
-               <c:if test="${map['cont'].cont_date!="" }">
+               
                <tr>
                  <td class="info_title">【签约日期】</td>
                  <td class="info_words">${map['cont'].cont_date}</td>
                </tr>
-               </c:if>
-               <c:if test="${map['cont'].loan_remark!="" }">
+              
                <tr>
                  <td class="info_title">【租赁说明】</td>
                  <td class="info_words">${map['cont'].loan_remark}</td>
                </tr>
-               </c:if>
-               <c:if test="${map['cont'].loan_add!="" }">
+               
+               
                <tr>
                  <td class="info_title">【补充条款】</td>
                  <td class="info_words">${map['cont'].loan_add}</td>
                </tr>
-               </c:if>
+               
              </table>
           </div>
         </div>
