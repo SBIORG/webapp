@@ -105,7 +105,6 @@
         <script>
 		  $(function(){
 			  $('#building_list a').bind(touchend,function(){
-				  alert('fff');
 				  window.location.href = $(this).attr('data-href');
 			  })
 			 });
