@@ -171,8 +171,11 @@
 			    $('.fyyd ol li').unbind(touchstart).bind(touchstart,choose_house);
 				//遍历避免重复
 				//选定房屋号
-				$('#choose_house').bind(touchstart,function(){
-					$('.hidden_house_id').each(function(){
+				//$('#choose_house').bind(touchstart,function(){
+					
+				//  })
+				  $('#choose_house').bind(touchend,function(){
+					  $('.hidden_house_id').each(function(){
 						if($(this).val()==''){
 							$('.hidden_house_id').remove();
 						}
@@ -186,14 +189,12 @@
 					  });
 					  $("#showhouseno").html(house_no_html);
 					  $("#book_submit_box form").append(hidden_html);
-				  })
-				  $('#choose_house').bind(touchend,function(){
 					  $('#select-house-content').hide();
 					  $('#page-footer').hide();
 					  $('.bottom_nav').hide();
 					  $('#book_submit_box').show();
 					  setTimeout(function () {
-							$('.apply_submit').show();}, 100);
+							$('.apply_submit').show();}, 150);
 				  })
 				 $('.fixed_button em').unbind(touchend).bind(touchend, hideButton);
 			}
