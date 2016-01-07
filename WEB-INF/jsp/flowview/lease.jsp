@@ -40,11 +40,11 @@
                </tr>
                <tr>
                  <td class="info_title">【应缴押金】</td>
-                 <td class="info_words">${map['cont'].deposit}元</td>
+                 <td class="info_words">${map['cont'].deposit}</td>
                </tr>
                <tr>
                  <td class="info_title">【预订订金】</td>
-                 <td class="info_words">${map['cont'].true_book_fee}元</td>
+                 <td class="info_words">${map['cont'].true_book_fee}</td>
                </tr>
                
                <tr>
