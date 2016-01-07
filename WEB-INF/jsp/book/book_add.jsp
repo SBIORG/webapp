@@ -150,6 +150,7 @@
 					$.each(houselistdata, function(key){
 						this_li_id = "house-'+houselistdata[key].house_id+'";
 						id_key=select_house_ids.indexOf(this_li_id);
+						alert(id_key);
 						select_style = '';
 						if(id_key){
 							select_style='choose';
