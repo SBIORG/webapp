@@ -32,7 +32,7 @@
 
     <!--留言返回按钮-->
     <div class="message_goback">
-      <a href="${pageContext.request.contextPath}/index.ation?lm=fy"> < <span>${param.houseNO}</span> 留言</a>
+      <a href="${pageContext.request.contextPath}/index.action?lm=fy"> < <span>${param.houseNO}</span> 留言</a>
     </div>
     <!--留言返回按钮-->
     <div class="message_wrappe">
