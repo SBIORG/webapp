@@ -147,6 +147,8 @@
 				$.each(listdata, function(index){
 					houseHtml += '<div class="floor_info fyyd"><ol class="clearfix">';
 					houselistdata = eval(listdata[index]);
+					console.log(select_house_ids);
+					console.log(select_house_lis);
 					$.each(houselistdata, function(key){
 						this_li_id = "house-"+houselistdata[key].house_id;
 						id_key=select_house_ids.indexOf(this_li_id);
@@ -219,6 +221,8 @@ function choose_house(){
 		$('.fixed_button').show();
 		select_house_ids.push($(this).attr("data-id"));
 		select_house_lis.push("house-"+$(this).attr("data-id"));
+		console.log(select_house_ids);
+		console.log(select_house_lis);
 	}
 	else if($(this).hasClass('choose'))
 	{
@@ -230,6 +234,8 @@ function choose_house(){
 			select_house_ids.slice(id_key,1);
 			select_house_lis.slice(id_key,1);	
 		}
+		console.log(select_house_ids);
+		console.log(select_house_lis);
 			
 	}
 	length=$('.choose').length;
