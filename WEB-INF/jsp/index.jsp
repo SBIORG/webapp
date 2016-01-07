@@ -32,7 +32,7 @@
 <div class="content" id="select-house-content">
 	<!--意见反馈-->
 	<div class="feedback_btn">
-		<a href="<%=request.getContextPath()%>/yjfk.action?url=<%=java.net.URLEncoder.encode(sbi.xwb.weixin.commons.filemonitor.PropertiesReader.read("server")+request.getContextPath()+"/index.jsp?lm=fy","UTF-8") %>"></a>
+		<a href="<%=request.getContextPath()%>/yjfk.action?url=<%=java.net.URLEncoder.encode(sbi.xwb.weixin.commons.filemonitor.PropertiesReader.read("server")+request.getContextPath()+"/index.action?lm=fy","UTF-8") %>"></a>
 		</div>
     <!--意见反馈-->
     
