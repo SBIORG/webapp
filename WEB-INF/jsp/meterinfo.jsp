@@ -77,7 +77,7 @@
           		 <a href="${pageContext.request.contextPath}/meterinfo.action?bid=${map['search_build_id']}&meterType=${map['search_meter_type']}&floor=${map['last_floor']}">上一层</a>
           	</c:when>
           	<c:otherwise>
-          		 <a>上一层</a>
+          		 <a href="#">上一层</a>
           	</c:otherwise>
           </c:choose>
             </li>
@@ -92,7 +92,7 @@
           		 <a href="${pageContext.request.contextPath}/meterinfo.action?bid=${map['search_build_id']}&meterType=${map['search_meter_type']}&floor=${map['next_floor']}">下一层</a>
           	</c:when>
           	<c:otherwise>
-          		 <a>下一层</a>
+          		 <a href="#">下一层</a>
           	</c:otherwise>
           	</c:choose>
             </li>
