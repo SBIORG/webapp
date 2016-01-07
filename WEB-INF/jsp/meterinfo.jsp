@@ -37,7 +37,7 @@
         <!--下拉框-->
         <div class="select_box clearfix">
          <div class="metet_select choose_meter fl">
-           <a href="#"><span>${meterTypes[meterType]}</span></a>
+           <p><span>${meterTypes[meterType]}</span></p>
            <!--弹框-->
            <div class="meter_popDiv" style="display:none;">
              <ul>
@@ -53,7 +53,7 @@
          </div>-->
          <div class="metet_select choose_buildings fl">
          <!--链接地址为:URL?meter_type=search_meter_type&build_id=当前的key，search_meter_type为孵化云平台返回的元素-->
-           <a href="#"><span>${buildings[buildId]}</span>栋</a>
+           <p><span>${buildings[buildId]}</span>栋</p>
            <!--弹框-->
            <div class="meter_popDiv" style="display:none;">
              <div class="bulidings_list" id="building_list">
@@ -77,7 +77,7 @@
           		 <a href="${pageContext.request.contextPath}/meterinfo.action?bid=${map['search_build_id']}&meterType=${map['search_meter_type']}&floor=${map['last_floor']}">上一层</a>
           	</c:when>
           	<c:otherwise>
-          		 <a>上一层</a>
+          		 <a href="#">上一层</a>
           	</c:otherwise>
           </c:choose>
             </li>
@@ -92,7 +92,7 @@
           		 <a href="${pageContext.request.contextPath}/meterinfo.action?bid=${map['search_build_id']}&meterType=${map['search_meter_type']}&floor=${map['next_floor']}">下一层</a>
           	</c:when>
           	<c:otherwise>
-          		 <a>下一层</a>
+          		 <a href="#">下一层</a>
           	</c:otherwise>
           	</c:choose>
             </li>
@@ -120,89 +120,4 @@
         <form class='meterForm' method="post" action="${pageContext.request.contextPath}/metersubmit.action">
         <input name="user_id" type="hidden" value="${userInfo.user_id}"><!--值为session的用户ID-->
         <input name="user_name" type="hidden" value="${userInfo.username}"><!--值为session的用户名-->
-        <input type="hidden" name='agency_id' value="${userInfo.agency_id }">
-        <div class="each_box">
-          <h1 class="each_h1 clearfix">
-            <span class=" fl">${meter.house_number }</span> <!--循环中的house_number-->
-            <span class="fr each_time">【上月表数】${meter.last_meter_num }<!--循环中的last_meter_num--></span>
-          </h1>
-          <div class="clearfix each_info">
-             <input type="text" class="write_meter_num" name="meter[${meter.meter_id}][meter_num]" placeholder="本月表数：">
-            <div>
-              <textarea class="write_meter_txt" name="meter[${meter.meter_id}][remark]" placeholder="输入备注..."></textarea>
-            </div>
-            <div class="meter_box clearfix">
-               <a class="add_meter_txt fl show_textarea">+加备注</a>
-               <input class="save_meter_num fr" type="button" value="保存">
-            </div>
-          </div>
-        </div>
-        <!--循环结束
-        
-        抄表业务-->
-        </form> 
-        </c:forEach>
-        </c:when>
-        <c:otherwise>
-        	<div style="text-align:center; margin-top:10px;">本层已抄表或无仪表!</div>
-        </c:otherwise>
-        </c:choose>
-      </div>
-    </div>
-    <!--业务-->
-  </div>
-  <!--底部栏-->
-    <!--上下层按钮-->
-    <div class="bottom_floor_btn clearfix">
-      <ul>
-        <li class="floor_up">
-          <c:choose>
-          	<c:when test="${map['last_floor'] != null}">
-          		 <a href="${pageContext.request.contextPath}/meterinfo.action?bid=${map['search_build_id']}&meterType=${map['search_meter_type']}&floor=${map['last_floor']}">上一层</a>
-          	</c:when>
-          	<c:otherwise>
-          		 <a>上一层</a>
-          	</c:otherwise>
-          </c:choose>
-		</li>
-        <li class="floor_save"><a>第${map['on_floor'] }层</a></li>
-        <li class="floor_down">
-            <c:choose>
-          	<c:when test="${map['next_floor'] != null}">
-          		 <a href="${pageContext.request.contextPath}/meterinfo.action?bid=${map['search_build_id']}&meterType=${map['search_meter_type']}&floor=${map['next_floor']}">下一层</a>
-          	</c:when>
-          	<c:otherwise>
-          		 <a>下一层</a>
-          	</c:otherwise>
-          	</c:choose>
-        </li>
-      </ul>
-    </div>
-    <!--上下层按钮-->
-    <script>
-	$('.save_meter_num').each(function(i){
-	  $(this).bind(touchend,function(){
-		    var url =  '${pageContext.request.contextPath}/metersubmit.action';
-			var form = $('.meterForm').eq(i);
-		    if(form.find('.write_meter_num').val()==''&& form.find('.write_meter_txt').val()==''){
-				alert('表单不能为空');
-			}else{
-				$.ajax({
-					url:url,
-					data:form.serialize(),
-					type:"post",
-					success:function(data){//ajax返回的数据
-						var dataObj=data;
-						if(dataObj.result!=1){
-							alert(dataObj.errorMsg);
-						}else if(dataObj.result==1){
-							form.remove();
-						}
-					}
-				})
-			}
-	  })
-	})
-	</script>
- </body>
-</html>
+        <input type="hidden" name='agency_id' value="${userInfo.agency_id }">        <div class="each_box">          <h1 class="each_h1 clearfix">            <span class=" fl">${meter.house_number }</span> <!--循环中的house_number-->            <span class="fr each_time">【上月表数】${meter.last_meter_num }<!--循环中的last_meter_num--></span>          </h1>          <div class="clearfix each_info">             <input type="text" class="write_meter_num" name="meter[${meter.meter_id}][meter_num]" placeholder="本月表数：">            <div>              <textarea class="write_meter_txt" name="meter[${meter.meter_id}][remark]" placeholder="输入备注..."></textarea>            </div>            <div class="meter_box clearfix">               <a class="add_meter_txt fl show_textarea">+加备注</a>               <input class="save_meter_num fr" type="button" value="保存">            </div>          </div>        </div>        <!--循环结束                抄表业务-->        </form>         </c:forEach>        </c:when>        <c:otherwise>        	<div style="text-align:center; margin-top:10px;">本层已抄表或无仪表!</div>        </c:otherwise>        </c:choose>      </div>    </div>    <!--业务-->  </div>  <!--底部栏-->    <!--上下层按钮-->    <div class="bottom_floor_btn clearfix">      <ul>        <li class="floor_up">          <c:choose>          	<c:when test="${map['last_floor'] != null}">          		 <a href="${pageContext.request.contextPath}/meterinfo.action?bid=${map['search_build_id']}&meterType=${map['search_meter_type']}&floor=${map['last_floor']}">上一层</a>          	</c:when>          	<c:otherwise>          		 <a>上一层</a>          	</c:otherwise>          </c:choose>		</li>        <li class="floor_save"><a>第${map['on_floor'] }层</a></li>        <li class="floor_down">            <c:choose>          	<c:when test="${map['next_floor'] != null}">          		 <a href="${pageContext.request.contextPath}/meterinfo.action?bid=${map['search_build_id']}&meterType=${map['search_meter_type']}&floor=${map['next_floor']}">下一层</a>          	</c:when>          	<c:otherwise>          		 <a>下一层</a>          	</c:otherwise>          	</c:choose>        </li>      </ul>    </div>    <!--上下层按钮-->    <script>	$('.save_meter_num').each(function(i){	  $(this).bind(touchend,function(){		    var url =  '${pageContext.request.contextPath}/metersubmit.action';			var form = $('.meterForm').eq(i);		    if(form.find('.write_meter_num').val()==''&& form.find('.write_meter_txt').val()==''){				alert('表单不能为空');			}else{				$.ajax({					url:url,					data:form.serialize(),					type:"post",					success:function(data){//ajax返回的数据						var dataObj=data;						if(dataObj.result!=1){							alert(dataObj.errorMsg);						}else if(dataObj.result==1){							form.remove();						}					}				})			}	  })	})	</script> </body></html>
