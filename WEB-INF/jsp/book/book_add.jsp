@@ -229,7 +229,7 @@ function choose_house(){
 		$(this).removeClass('choose').addClass('normal');
 		$(this).find('em').hide();
 		
-		id_key=select_house_ids.indexOf();
+		id_key=select_house_ids.indexOf($(this).attr("data-id"));
 		alert(id_key);
 		if(id_key>=0){
 			select_house_ids.slice(id_key,1);
