@@ -41,7 +41,7 @@ $(function(){
 	var house_box_padding = ($('.house_box').width()*49)/1000;
 	$('.house_box').css('padding-top',house_box_padding);
 	//
-	$('.house_wrappe').height($('html').height()-$('.top_nav').height()-$('.bottom_nav').height()-parseFloat($('.bottom_nav').css('paddingTop'))-parseFloat($('.top_nav').css('paddingTop')));
+	$('.house_wrappe').height($('html').height()-$('.top_nav').height()-$('.bottom_nav').height()-$('.fixed_button').height()-parseFloat($('.bottom_nav').css('paddingTop'))-parseFloat($('.top_nav').css('paddingTop')));
 	$('.message_wrappe').height($('html').height()-$('.message_goback').height()-$('.bottom_submit').height()+parseFloat($('.all_messages').css('marginTop'))-10);
 	$('.phone_work').height($('html').height()-$('.bottom_nav').height()-parseFloat($('.bottom_nav').css('paddingTop')));
 	$('.phone_work_sp').height($('html').height()-$('.bottom_nav').height()-parseFloat($('.bottom_nav').css('paddingTop'))-$('.message_goback').height()-$('.ywsp_button').height());
@@ -150,9 +150,10 @@ function choose_house(){
 
 function hideButton(){
 	$('.fixed_button').hide();
-	$(".fyyd ol li").removeClass('choose').addClass('normal');
+	if($(".fyyd ol li").hasClass('choose')){
+		$(".fyyd ol li").removeClass('choose').addClass('normal');
+	}
 	$(".fyyd ol li").find('em').hide();
-	
 }
 
 function showPopDiv(){
