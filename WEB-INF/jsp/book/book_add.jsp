@@ -182,10 +182,8 @@
 					  $('.floor_info').find('.choose').each(function(){
 						 // alert($(this).attr("data-housenumber")+ " ");
 						  house_no_html+=$(this).attr("data-housenumber")+ " ";
-						  alert($(this).attr("data-id"));
 						  hidden_html+='<input type="hidden" class="hidden_house_id" name="house_ids[]" value="'+$(this).attr("data-id")+'" />';
 					  });
-					  alert(hidden_html);
 					  $("#showhouseno").html(house_no_html);
 					  $("#book_submit_box form").append(hidden_html);
 				  })
