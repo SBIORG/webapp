@@ -90,7 +90,7 @@ $(function(){
 	//选择表以及栋数 
 	$('.choose_meter a').unbind(touchend).bind(touchend, meterChoose);
 	$('.choose_buildings a').unbind(touchend).bind(touchend, meterChoose);
-	$('.choose_meter ul li').unbind(touchend).bind(touchend, getMeterText);
+	//$('.choose_meter ul li').unbind(touchend).bind(touchend, getMeterText);
 	$('.choose_buildings ul li').unbind(touchend).bind(touchend, getBuildingText);
 	
 	//抄表加备注和收起备注
@@ -176,12 +176,12 @@ function meterChoose(){
 	$(this).siblings(".meter_popDiv").show();
 	$(this).parent().siblings().find(".meter_popDiv").hide();
 }
-function getMeterText(){
+/*function getMeterText(){
 	var choose_text = $(this).find("span").text();
 	var parent = $(this).parent().parent();
 	parent.siblings('a').find('span').text(choose_text);
 	$('.meter_popDiv').hide();
-}
+}*/
 function getBuildingText(){
 	var choose_text = $(this).find("span").text();
 	var parent = $(this).parent().parent().parent();
