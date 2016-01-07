@@ -80,7 +80,8 @@
 	//document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 	//document.addEventListener('DOMContentLoaded', loaded, false);
 	window.addEventListener('load', loaded, false);
-  var houseMsgUrl = "${pageContext.request.contextPath}/msglist.action";
+    var houseMsgUrl = "${pageContext.request.contextPath}/msglist.action";
+	var searchUrl = '${pageContext.request.contextPath}/lc/search.action';
   //function alert(){alert('343434');}
  function getHouseList(build_id)
   {
@@ -130,7 +131,6 @@ $(function(){
 	if($("#buildlistbox li").length>0)
 	{
 		build_id=$("#buildlistbox li").eq(0).attr("data-id");
-		alert(build_id);
 		getHouseList(build_id);
 	}else{
 		$("#select-house-content").hide();
@@ -139,7 +139,7 @@ $(function(){
 	}
 	
 	
-	searchUrl = '${pageContext.request.contextPath}/lc/search.action';
+	
 });
 </script>
 </body>
