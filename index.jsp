@@ -17,6 +17,16 @@
 <script src="<%=request.getContextPath()%>/resources/js/main.js" type="text/javascript"></script>
 </head>
 <body>
+<div class="content" id="errorContent" style="display:none;">
+   <div class="inner">
+      <div class="success">
+         <img src="<%=request.getContextPath()%>/resources/images/error.png">
+         <p>${message}</p>
+      </div>
+   </div>
+</div>
+
+
 <div class="content" id="select-house-content">
 	<!--意见反馈-->
 	<div class="feedback_btn">
@@ -112,57 +122,71 @@ function getBuildInfo(){
 			
 			var dataObj=data;
 			
-			if(dataObj.result!=1){
+			if(dataObj.result!=1)
+			{
+				$("#select-house-content").remove();
+				$("#errorContent").show();
+				$("#errorContent p").html(dataObj.errorMsg);
+				
 				
 			}else if(dataObj.result==1){
 				
 				listdata = eval(dataObj.data);
-				buildHtml = '';
-				buildHtml_b = '';
-				$.each(listdata, function(index){
-					buildHtml_b  += '<li   data-id="'+listdata[index].id+'"><a href="#">'+listdata[index].building_number+'</a></li>';
-					if(index==0){
-						build_id = listdata[index].id;
-						buildHtml += '<li  data-id="'+listdata[index].id+'"><a href="#" class="actived">'+listdata[index].building_number+'</a></li>';
+				if(listdata.length==0)
+				{
+					$("#select-house-content").remove();
+					$("#errorContent").show();
+					$("#errorContent p").html("暂无数据");
 						
-					}else{
-						buildHtml += '<li  data-id="'+listdata[index].id+'"><a href="#">'+listdata[index].building_number+'</a></li>';
-					}
-						
-				})	
-				$(".buildlistbox").eq(0).append(buildHtml);
-				$(".buildlistbox").eq(1).append(buildHtml_b);
-				//计算ul的宽度
-				var sum=0;
-				$('.building_num ul li').each(function(){
-					sum+=$(this).width();
-				})
-				var ul_width = $('.building_num ul li').length*parseFloat($('.building_num ul li').css("marginRight"))+sum+5;
-				$('.building_num ul').width(ul_width);
-				//
-				$("#buildlistbox li").bind(touchend,function(){
-					$("#buildlistbox a").removeClass("actived");
-					$(this).find('a').addClass("actived");
-					$('.fixed_button').hide();
-					getHouseList($(this).attr("data-id")); 
-				});
-				$("#buildlistbox1 li").bind(touchend,function(){
-					var li_length=0;
-					var i = $(this).index();
-					$("#buildlistbox a").removeClass("actived");
-				    $("#buildlistbox li").eq(i).find('a').addClass("actived");
-					$('.fixed_button').hide();
-					getHouseList($(this).attr("data-id")); 
-					$('.slide_btn').removeClass('click');
-					$('.popDiv').hide();
-					for(var j=0; j<i; j++)
-				    {
-					    li_length += parseFloat($("#buildlistbox li").eq(j).width())+parseFloat($(this).css('marginRight'));
-				    }
-				    myScroll_h.scrollTo(-(li_length), 0, 200);
-				    li_length=0;
-				});
-				getHouseList(build_id);
+				}else{
+					buildHtml = '';
+					buildHtml_b = '';
+					$.each(listdata, function(index){
+						buildHtml_b  += '<li   data-id="'+listdata[index].id+'"><a href="#">'+listdata[index].building_number+'</a></li>';
+						if(index==0){
+							build_id = listdata[index].id;
+							buildHtml += '<li  data-id="'+listdata[index].id+'"><a href="#" class="actived">'+listdata[index].building_number+'</a></li>';
+							
+						}else{
+							buildHtml += '<li  data-id="'+listdata[index].id+'"><a href="#">'+listdata[index].building_number+'</a></li>';
+						}
+							
+					})	
+					$(".buildlistbox").eq(0).append(buildHtml);
+					$(".buildlistbox").eq(1).append(buildHtml_b);
+					//计算ul的宽度
+					var sum=0;
+					$('.building_num ul li').each(function(){
+						sum+=$(this).width();
+					})
+					var ul_width = $('.building_num ul li').length*parseFloat($('.building_num ul li').css("marginRight"))+sum+5;
+					$('.building_num ul').width(ul_width);
+					//
+					$("#buildlistbox li").bind(touchend,function(){
+						$("#buildlistbox a").removeClass("actived");
+						$(this).find('a').addClass("actived");
+						$('.fixed_button').hide();
+						getHouseList($(this).attr("data-id")); 
+					});
+					$("#buildlistbox1 li").bind(touchend,function(){
+						var li_length=0;
+						var i = $(this).index();
+						$("#buildlistbox a").removeClass("actived");
+						$("#buildlistbox li").eq(i).find('a').addClass("actived");
+						$('.fixed_button').hide();
+						getHouseList($(this).attr("data-id")); 
+						$('.slide_btn').removeClass('click');
+						$('.popDiv').hide();
+						for(var j=0; j<i; j++)
+						{
+							li_length += parseFloat($("#buildlistbox li").eq(j).width())+parseFloat($(this).css('marginRight'));
+						}
+						myScroll_h.scrollTo(-(li_length), 0, 200);
+						li_length=0;
+					});
+					getHouseList(build_id);
+				}
+				
 			}
 			
 			
