@@ -91,7 +91,7 @@ $(function(){
 	$('.choose_meter a').unbind(touchend).bind(touchend, meterChoose);
 	$('.choose_buildings a').unbind(touchend).bind(touchend, meterChoose);
 	//$('.choose_meter ul li').unbind(touchend).bind(touchend, getMeterText);
-	$('.choose_buildings ul li').unbind(touchend).bind(touchend, getBuildingText);
+	//$('.choose_buildings ul li').unbind(touchend).bind(touchend, getBuildingText);
 	
 	//抄表加备注和收起备注
 	$('.add_meter_txt').unbind(touchend).bind(touchend, addMeterTxt);
@@ -169,10 +169,10 @@ function meterChoose(){
 	$('.meter_popDiv').hide();
 }*/
 function getBuildingText(){
-	var choose_text = $(this).find("span").text();
-	var parent = $(this).parent().parent().parent();
-	parent.siblings('a').find('span').text(choose_text);
-	$('.meter_popDiv').hide();
+	//var choose_text = $(this).find("span").text();
+	//var parent = $(this).parent().parent().parent();
+	//parent.siblings('a').find('span').text(choose_text);
+	//$('.meter_popDiv').hide();
 }
 function addMeterTxt(){
 	if($(this).hasClass('show_textarea')){
