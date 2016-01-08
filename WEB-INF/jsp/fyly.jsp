@@ -119,6 +119,7 @@
   <script>
       $(function(){
 		  $('.submit_message').bind(touchend,function(){
+			  $('.leave_message').blur();
 			  if($('.leave_message').val()==''){
 				  $('.leave_message').addClass('errorBorder');
 			  }else{
