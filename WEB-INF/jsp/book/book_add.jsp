@@ -355,6 +355,9 @@ function getBuildInfo(){
 			startYear: currYear - 50, //开始年份
 			endYear: currYear + 20 //结束年份
 		};
-		$("#USER_AGE1").mobiscroll($.extend(opt['date'], opt['default']));
+		setTimeout(function(){
+			$("#USER_AGE1").mobiscroll($.extend(opt['date'], opt['default']));
+		},200)
+		
   });
   </script>
