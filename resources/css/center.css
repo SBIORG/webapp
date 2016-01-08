@@ -157,7 +157,7 @@ textarea:-ms-input-placeholder {
     display:block;
     position:fixed;
     right:0;
-    z-index:99999;
+    z-index:1000;
     _position:absolute;
    /* _top:expression(eval(document.documentElement.scrollBottom + 50));*/
 }
