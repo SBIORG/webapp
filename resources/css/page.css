@@ -225,8 +225,8 @@
 	.metet_select{
 		background-size:10px auto;
 	}
-	.metet_select a{
-		display:inline;
+	.metet_select .bulidings_list a{
+		display:inline!important;
 		text-align:center;
 		color:#4f4e4e;
     }
