@@ -95,10 +95,10 @@
           </c:choose>
           </c:forEach>
           <!--留言右-->
- 
+ 			<!--锚点定位--><a id="locationMessage" ></a>
         </div>
       </div>
-      <!--锚点定位--><a id="locationMessage" ></a>
+      
     </div>
   </div>
   <!--底部留言框和提交按钮-->
