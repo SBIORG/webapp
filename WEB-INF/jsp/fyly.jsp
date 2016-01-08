@@ -98,11 +98,12 @@
  
         </div>
       </div>
+      <!--锚点定位--><a id="locationMessage" ></a>
     </div>
   </div>
   <!--底部留言框和提交按钮-->
   <div class="bottom_submit">
-  	<form action="${pageContext.request.contextPath}/msgadd.action" method="post">
+  	<form  class="bottomSubmitForm" action="${pageContext.request.contextPath}/msgadd.action" method="post">
     <input name="user_id" type="hidden" value="${userInfo.user_id }"><!--session的用户ID-->
     <input name="op_name" type="hidden" value="${userInfo.username }"><!--session的用户名称-->
     <input name="house_id" type="hidden" value="${param.houseId}"><!--get的房屋ID-->
@@ -110,10 +111,21 @@
     <div class="messages_box">
       <textarea class="leave_message" name="content" placeholder="留言"></textarea>
     </div>
-    <input type="submit" class="submit_message" value="提交留言">
+    <input type="button" class="submit_message" value="提交留言">
     </form>
   </div>
   <!--底部留言框和提交按钮-->
   <!--content-->
+  <script>
+      $(function(){
+		  $('.submit_message').bind(touchend,function(){
+			  if($('.leave_message').val()==''){
+				  $('.leave_message').addClass('errorBorder');
+			  }else{
+				  $('.bottomSubmitForm').submit();
+			  }
+		  })
+	  })
+  </script>
 </body>
 </html>
