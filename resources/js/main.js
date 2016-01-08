@@ -176,13 +176,13 @@ function getBuildingText(){
 }
 function addMeterTxt(){
 	if($(this).hasClass('show_textarea')){
-		$('.write_meter_txt').show();
-		$('.write_meter_txt').addClass("write_meter_txt_height");
+		$(this).parent().siblings().find('.write_meter_txt').show();
+		$(this).parent().siblings().find('.write_meter_txt').addClass("write_meter_txt_height");
 		$(this).html("-收起");
 		$(this).removeClass("show_textarea");
 	}else{
-		$('.write_meter_txt').hide();
-		$('.write_meter_txt').removeClass("write_meter_txt_height");
+		$(this).parent().siblings().find('.write_meter_txt').hide();
+		$(this).parent().siblings().find('.write_meter_txt').removeClass("write_meter_txt_height");
 		$(this).html("+加备注");
 		$(this).addClass("show_textarea");
 	}

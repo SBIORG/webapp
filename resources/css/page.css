@@ -225,6 +225,11 @@
 	.metet_select{
 		background-size:10px auto;
 	}
+	.metet_select a{
+		display:inline;
+		text-align:center;
+		color:#4f4e4e;
+    }
 	.metet_select a, .metet_select span, .word_zhi, .metet_select p{
 		font-size:12px;
 	}

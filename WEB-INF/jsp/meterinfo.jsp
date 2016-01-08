@@ -59,7 +59,7 @@
              <div class="bulidings_list" id="building_list">
                  <ul>
                  <c:forEach var="building" items="${buildings}"> 
-                   <a href="#" data-href="${pageContext.request.contextPath}/meterinfo.action?bid=${building.key}&meterType=${map['search_meter_type']}"><li> <span>${building.value }</span></li></a>
+                   <li><a href="#" data-href="${pageContext.request.contextPath}/meterinfo.action?bid=${building.key}&meterType=${map['search_meter_type']}"><span>${building.value }</span></a></li>
                 </c:forEach>
                  </ul>
              </div>
@@ -104,7 +104,7 @@
         </div>
         <script>
 		  $(function(){
-			  $('#building_list a').bind(touchend,function(){
+			  $('#building_list ul li a').bind(touchend,function(){
 				  window.location.href = $(this).attr('data-href');
 			  })
 			 });
