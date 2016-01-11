@@ -107,7 +107,7 @@
 						}else{
 							houseHtml += '<li class="disable" data-housenumber="'+houselistdata[key].house_number+'" data-id="'+houselistdata[key].house_id+'">';
 						}
-						houseHtml += '<a href="'+houseMsgUrl+'?houseId='+houselistdata[key].house_id+'&houseNO='+houselistdata[key].house_number+'"><h2>'+houselistdata[key].house_number+'</h2><span>'+houselistdata[key].lease_area+'平</span><em></em></a></li>';
+						houseHtml += '<a href="'+houseMsgUrl+'?houseId='+houselistdata[key].house_id+'&houseNO='+houselistdata[key].house_number+'#locationMessage"><h2>'+houselistdata[key].house_number+'</h2><span>'+houselistdata[key].lease_area+'平</span><em></em></a></li>';
 					});
 					houseHtml += '</ol></div>';
 				});
