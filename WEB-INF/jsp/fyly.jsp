@@ -26,7 +26,7 @@
   <div class="content">
         <!--意见反馈-->
       <div class="feedback_btn">
-      <a href="<%=request.getContextPath()%>/yjfk.action?url=<%=java.net.URLEncoder.encode(sbi.xwb.weixin.commons.filemonitor.PropertiesReader.read("server")+request.getContextPath()+"/msglist.action?houseId="+request.getParameter("houseId")+"&houseNO="+request.getParameter("houseNO"),"UTF-8")+"#locationMessage" %>"></a>
+      <a href="<%=request.getContextPath()%>/yjfk.action?url=<%=java.net.URLEncoder.encode(sbi.xwb.weixin.commons.filemonitor.PropertiesReader.read("server")+request.getContextPath()+"/msglist.action?houseId="+request.getParameter("houseId")+"&houseNO="+request.getParameter("houseNO"),"UTF-8")%>"></a>
       </div>
       <!--意见反馈-->
 
