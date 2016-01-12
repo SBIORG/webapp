@@ -218,6 +218,20 @@
 		 }
 	  });
   }
+function hideButton(){
+	$('.fixed_button').hide();
+	$(".fyyd ol li").each(function(){
+		if($(this).hasClass('choose')){
+		   $(this).removeClass('choose').addClass('normal');
+	    }
+	})
+	select_house_ids = [];
+	select_house_lis = [];
+	select_house_numbers=[];
+	$(".fyyd ol li").find('em').hide();
+	$('.button_value i').text(0);
+}
+
 function choose_house(){
 	var length=0;
 	var num=0;

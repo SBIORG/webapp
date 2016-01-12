@@ -14,6 +14,7 @@
 <script src="<%=request.getContextPath()%>/resources/js/jquery-1.7.js" type="text/javascript"></script>
 <script src="<%=request.getContextPath()%>/resources/js/jquery.touchSwipe.js" type="text/javascript"></script>
 <script src="<%=request.getContextPath()%>/resources/js/main.js" type="text/javascript"></script>
+
 </head>
 <style>
   html,body{
@@ -95,7 +96,7 @@
           </c:choose>
           </c:forEach>
           <!--留言右-->
- 			<!--锚点定位--><a id="locationMessage" ></a>
+ 			<!--锚点定位--><a id="locationMessage" name="locationMessage" ></a>
         </div>
       </div>
       
