@@ -14,9 +14,7 @@
 <script src="<%=request.getContextPath()%>/resources/js/jquery-1.7.js" type="text/javascript"></script>
 <script src="<%=request.getContextPath()%>/resources/js/jquery.touchSwipe.js" type="text/javascript"></script>
 <script src="<%=request.getContextPath()%>/resources/js/main.js" type="text/javascript"></script>
-<script>
-window.location.hash("locationMessage");
-</script>
+
 </head>
 <style>
   html,body{
