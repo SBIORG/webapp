@@ -31,9 +31,10 @@
 		classpath*:applicationContext.xml </param-value> </init-param> </servlet> 
 		<servlet-mapping> <servlet-name>springMVC_REST</servlet-name> <url-pattern>/</url-pattern> 
 		</servlet-mapping> -->
+		
 	<filter>
 		<filter-name>jsessionid</filter-name>
-		<filter-class>com.haoxingtong.web.web.filter.DisableUrlSessionFilter</filter-class>
+		<filter-class>sbi.xwb.weixin.filter.DisableUrlSessionFilter</filter-class>
 	</filter>
 	<filter-mapping>
 		<filter-name>jsessionid</filter-name>
