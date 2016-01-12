@@ -44,7 +44,7 @@
          <input type="submit" class="login_submit" value="登录">
        </div>
        </form>
-        <!-- 无头像  -->
+        <!-- 
     <div class="WB_panel oauth_main">
         <div class="oauth_error">
             <div class="oauth_error_content clearfix">
@@ -55,6 +55,7 @@
             </div>
         </div>
     </div>
+	无头像  -->
     </div>
     <!--登录-->
   </div>
