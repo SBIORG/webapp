@@ -132,7 +132,7 @@ function showPassword(){
 
 
 
-function hideButton(){
+/*function hideButton(){
 	$('.fixed_button').hide();
 	$(".fyyd ol li").each(function(){
 		if($(this).hasClass('choose')){
@@ -141,7 +141,7 @@ function hideButton(){
 	})
 	$(".fyyd ol li").find('em').hide();
 	$('.button_value i').text(0);
-}
+}*/
 
 function showPopDiv(){
 	if($('.popDiv').is(':hidden')){
