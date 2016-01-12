@@ -140,6 +140,7 @@ function hideButton(){
 	    }
 	})
 	$(".fyyd ol li").find('em').hide();
+	$('.button_value i').text(0);
 }
 
 function showPopDiv(){
