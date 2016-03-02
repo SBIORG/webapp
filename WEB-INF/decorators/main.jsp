@@ -21,25 +21,25 @@ if(lm!=null){
       <div class="bottom_nav"><!--导航选中效果加class：nav_actived-->
          <ul>
            <li class="fangyuan <c:if test="${lm=='fy'}">nav_actived</c:if>">
-             <a href='${pageContext.request.contextPath}/index.action?lm=fy'>
+             <a href='${pageContext.request.contextPath}/admin/index.action?lm=fy'>
               <i></i>
               <p>房源</p>
              </a>
            </li>
            <li class="yuding <c:if test="${lm=='yd'}">nav_actived</c:if>">
-             <a href='${pageContext.request.contextPath}/lc/start.action?flowSign=book&lm=yd'>
+             <a href='${pageContext.request.contextPath}/admin/lc/start.action?flowSign=book&lm=yd'>
               <i></i>
               <p>预定</p>
              </a>
            </li>
            <li class="yewu <c:if test="${lm=='yw'}">nav_actived</c:if>">
-             <a href='${pageContext.request.contextPath}/lc/list.action?lm=yw'>
+             <a href='${pageContext.request.contextPath}/admin/lc/list.action?lm=yw'>
               <i></i>
               <p>业务</p>
              </a>
            </li>
            <li class="chaobiao <c:if test="${lm=='cb'}">nav_actived</c:if>">
-             <a href='${pageContext.request.contextPath}/meterinfo.action?lm=cb'>
+             <a href='${pageContext.request.contextPath}/admin/meterinfo.action?lm=cb'>
               <i></i>
               <p>抄表</p>
              </a>
