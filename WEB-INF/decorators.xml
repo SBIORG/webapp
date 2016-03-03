@@ -10,5 +10,9 @@
     <decorator name="main" page="main.jsp">
         <pattern>/admin/*</pattern>
     </decorator>
+    
+     <decorator name="footer" page="footer.jsp">
+        <pattern>/user/*</pattern>
+    </decorator>
 
 </decorators>
