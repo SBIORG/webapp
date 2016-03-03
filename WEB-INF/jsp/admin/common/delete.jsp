@@ -19,7 +19,7 @@
       <!--意见反馈-->
     <!--审批业务名称及返回按钮-->
     <div class="message_goback">
-      <a href="${pageContext.request.contextPath}/admin/lc/view.action?flowId=${param.flowId}"> <span>${map['executed_name'] }</span></a>
+      <a href="${pageContext.request.contextPath}/admin/lc/view.action?flowId=${param.flowId}"> < <span>${map['executed_name'] }</span></a>
     </div>
     <!--审批业务名称及返回按钮-->
     <!--业务-->
