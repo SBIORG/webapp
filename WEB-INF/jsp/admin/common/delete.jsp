@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
 <%@ include file="/taglibs.jsp"%>
 <!--content-->
-<form action="${pageContext.request.contextPath}/admin/lc/handle.action" method="post">
+<form class="delete_form" action="${pageContext.request.contextPath}/admin/lc/handle.action" method="post">
 <input type="hidden" name='task_flg' value=2 >
   <input type="hidden" name='flow_id' value="${map['flow_id'] }">  
   <input type="hidden" name='task_id' value="${map['task_id'] }">  
@@ -19,7 +19,7 @@
       <!--意见反馈-->
     <!--审批业务名称及返回按钮-->
     <div class="message_goback">
-      <a href="sjyw.html"> < <span>租赁签约</span></a>
+      <a href="${pageContext.request.contextPath}/admin/lc/view.action?flowId=${param.flowId}"> <span>${map['executed_name'] }</span></a>
     </div>
     <!--审批业务名称及返回按钮-->
     <!--业务-->
@@ -38,11 +38,16 @@
     <!--审批按钮-->
     <div class="ywsp_button">
        <ul>
-         <li class="refuse"><a>确认</a></li>
-         <li class="pass"><a>取消</a></li>
+         <li class="refuse"><a class="sure_delete">确认</a></li>
+         <li class="pass"><a class="cancle_delete" href="${pageContext.request.contextPath}/admin/lc/view.action?flowId=${param.flowId}">取消</a></li>
        </ul>
     </div>
     <!--审批按钮-->
   </form>
   <!--底部栏-->
   <!--content-->
+  <script>
+    $('.sure_delete').bind(touchend,function(){
+		 $('.delete_form').submit();
+	})
+  </script>
