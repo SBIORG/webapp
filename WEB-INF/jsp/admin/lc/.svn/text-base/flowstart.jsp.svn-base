@@ -23,6 +23,6 @@
 </style>
 
 <body>
-    <jsp:include page="/WEB-INF/jsp/${flow.widgetName }.jsp" flush="true"/>
+    <jsp:include page="/WEB-INF/jsp/admin/${flow.widgetName }.jsp" flush="true"/>
 </body>
 </html>

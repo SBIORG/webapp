@@ -27,7 +27,7 @@
   <div class="content">
       <!--意见反馈-->
       <div class="feedback_btn">
-        <a href="<%=request.getContextPath()%>/yjfk.action?url=<%=java.net.URLEncoder.encode(sbi.xwb.weixin.commons.filemonitor.PropertiesReader.read("server")+request.getContextPath()+"/lc/list.action?lm=yw","UTF-8") %>"></a>
+        <a href="<%=request.getContextPath()%>/yjfk.action?url=<%=java.net.URLEncoder.encode(sbi.xwb.weixin.commons.filemonitor.PropertiesReader.read("server")+request.getContextPath()+"/admin/lc/list.action?lm=yw","UTF-8") %>"></a>
       </div>
       <!--意见反馈-->
     <!--业务-->
@@ -40,7 +40,7 @@
         
             <!--每一条业务信息-->
             <c:forEach items="${flowBusPojos}" var="bus" varStatus="status">
-            <a class="all_link" href="${pageContext.request.contextPath}/lc/view.action?flowId=${bus.flow_id}">
+            <a class="all_link" href="${pageContext.request.contextPath}/admin/lc/view.action?flowId=${bus.flow_id}">
                 <div class="each_box">
                   <h1 class="each_h1">${bus.flow_name }</h1>
                   <div class="clearfix each_info">
@@ -107,11 +107,11 @@ function pullUpAction () { //上拉加载更多内容  动态发送ajax请求获
 		var el, a, i, content;
 		el = document.getElementById('thelist');
 		flag=flag+1;
-		showUrl="${pageContext.request.contextPath}/lc/view.action?flowId=";
+		showUrl="${pageContext.request.contextPath}/admin/lc/view.action?flowId=";
 		if(isLoadAjax==true){
 			 $.ajax({
 					type: "GET",
-					url: "${pageContext.request.contextPath}/lc/ajaxList.action?page="+flag,
+					url: "${pageContext.request.contextPath}/admin/lc/ajaxList.action?page="+flag,
 					dataType: "json",
 					success: function(data){
 						// alert(data);

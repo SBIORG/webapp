@@ -20,26 +20,26 @@ if(lm!=null){
     <!--页面公用底部导航-->
       <div class="bottom_nav"><!--导航选中效果加class：nav_actived-->
          <ul>
-           <li class="fangyuan">
-             <a href='http://www.baidu.com'>
+           <li class="fangyuan <c:if test="${lm=='ht'}">nav_actived</c:if>">
+             <a href='${pageContext.request.contextPath}/user/uccontplist.action?lm=ht'>
               <i></i>
               <p>合同</p>
              </a>
            </li>
-           <li class="yuding">
-             <a href='http://www.sina.com.cn/'>
+           <li class="yuding  <c:if test="${lm=='jf'}">nav_actived</c:if>">
+             <a href='${pageContext.request.contextPath}/user/ucpayfeep.action?lm=jf'>
               <i></i>
               <p>缴费</p>
              </a>
            </li>
-           <li class="yewu">
-             <a href='http://www.weibo.com'>
+           <li class="yewu <c:if test="${lm=='tf'}">nav_actived</c:if>">
+             <a href='${pageContext.request.contextPath}/user/ucbackfeep.action?lm=tf'>
               <i></i>
               <p>退费</p>
              </a>
            </li>
-           <li class="chaobiao">
-             <a href='https://wx.qq.com/'>
+           <li class="chaobiao <c:if test="${lm=='sb'}">nav_actived</c:if>">
+             <a href='${pageContext.request.contextPath}/user/ucmeter.action?lm=sb'>
               <i></i>
               <p>水电</p>
              </a>

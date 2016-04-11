@@ -27,15 +27,15 @@
   <div class="content">
     <!--审批业务名称及返回按钮-->
     <div class="message_goback">
-      <a href="${pageContext.request.contextPath}/lc/list.action"> < <span>${map['flow_info'].flow_name }</span></a>
+      <a href="${pageContext.request.contextPath}/admin/lc/list.action?lm=yw"> < <span>${map['flow_info'].flow_name }</span></a>
     </div>
-    <jsp:include page="/WEB-INF/jsp/flowview/${map['flow_info'].flow_sign}.jsp" flush="true"/>
+    <jsp:include page="/WEB-INF/jsp/admin/flowview/${map['flow_info'].flow_sign}.jsp" flush="true"/>
    
   </div>
   <!--底部栏-->
    <!--意见反馈-->
 	<div class="feedback_btn">
-		<a href="<%=request.getContextPath()%>/yjfk.action?url=<%=java.net.URLEncoder.encode(sbi.xwb.weixin.commons.filemonitor.PropertiesReader.read("server")+request.getContextPath()+"/lc/view.action?flowId="+request.getParameter("flowId"),"UTF-8") %>"></a>
+		<a href="<%=request.getContextPath()%>/yjfk.action?url=<%=java.net.URLEncoder.encode(sbi.xwb.weixin.commons.filemonitor.PropertiesReader.read("server")+request.getContextPath()+"/admin/lc/view.action?flowId="+request.getParameter("flowId"),"UTF-8") %>"></a>
 	</div>
     <!--意见反馈-->
       
@@ -46,7 +46,7 @@
     <div class="ywsp_button">
        <ul>
         <c:forEach items="${btns }" var="btn" varStatus="status">
-         <li class="refuse" style='width:${100/fn:length(btns)}%'><a href="${pageContext.request.contextPath}/lc/exec.action?flowId=${btn.flow_id}&nodeId=${btn.node_id}&executedId=${btn.executed_id}">${btn.executed_name }</a></li>
+         <li class="refuse" style='width:${100/fn:length(btns)}%'><a href="${pageContext.request.contextPath}/admin/lc/exec.action?flowId=${btn.flow_id}&nodeId=${btn.node_id}&executedId=${btn.executed_id}">${btn.executed_name }</a></li>
          </c:forEach>
        </ul>
     </div>

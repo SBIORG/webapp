@@ -27,13 +27,13 @@
   <div class="content">
         <!--意见反馈-->
       <div class="feedback_btn">
-      <a href="<%=request.getContextPath()%>/yjfk.action?url=<%=java.net.URLEncoder.encode(sbi.xwb.weixin.commons.filemonitor.PropertiesReader.read("server")+request.getContextPath()+"/msglist.action?houseId="+request.getParameter("houseId")+"&houseNO="+request.getParameter("houseNO"),"UTF-8")+"#locationMessage" %>"></a>
+      <a href="<%=request.getContextPath()%>/yjfk.action?url=<%=java.net.URLEncoder.encode(sbi.xwb.weixin.commons.filemonitor.PropertiesReader.read("server")+request.getContextPath()+"/admin/msglist.action?houseId="+request.getParameter("houseId")+"&houseNO="+request.getParameter("houseNO"),"UTF-8")+"#locationMessage" %>"></a>
       </div>
       <!--意见反馈-->
 
     <!--留言返回按钮-->
     <div class="message_goback">
-      <a href="${pageContext.request.contextPath}/index.action?lm=fy"> < <span>${param.houseNO}</span> 留言</a>
+      <a href="${pageContext.request.contextPath}/admin/index.action?lm=fy"> < <span>${param.houseNO}</span> 留言</a>
     </div>
     <!--留言返回按钮-->
     <div class="message_wrappe">
@@ -104,7 +104,7 @@
   </div>
   <!--底部留言框和提交按钮-->
   <div class="bottom_submit">
-  	<form  class="bottomSubmitForm" action="${pageContext.request.contextPath}/msgadd.action" method="post">
+  	<form  class="bottomSubmitForm" action="${pageContext.request.contextPath}/admin/msgadd.action" method="post">
     <input name="user_id" type="hidden" value="${userInfo.user_id }"><!--session的用户ID-->
     <input name="op_name" type="hidden" value="${userInfo.username }"><!--session的用户名称-->
     <input name="house_id" type="hidden" value="${param.houseId}"><!--get的房屋ID-->
